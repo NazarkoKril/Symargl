@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Mariupol', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 1050px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1010100D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #101010E5;
+  border-radius: 6px;
+  transition: all 0.35s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color_black);
+}
