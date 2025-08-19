@@ -1,51 +1,145 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Mariupol', sans-serif;
-  text-decoration: none;
-  list-style: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Mariupol", sans-serif;
+	text-decoration: none;
+	list-style: none;
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 40px;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 40px;
 }
 @media (max-width: 1050px) {
-  .container {
-    padding: 0 20px;
-  }
+	.container {
+		padding: 0 20px;
+	}
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-  background-color: #fff;
+	background-color: #fff;
 }
 
 img {
-  width: 100%;
-  display: block;
-  user-select: none;
+	width: 100%;
+	display: block;
+	user-select: none;
 }
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+	width: 12px;
+	height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1010100D;
+	background: #1010100d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #101010E5;
-  border-radius: 6px;
-  transition: all 0.35s ease-in-out;
+	background: #101010e5;
+	border-radius: 6px;
+	transition: all 0.35s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color_black);
+	background: var(--color_black);
+}
+/* БАЗОВІ СТИЛІ */
+.icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+
+	&.orange {
+		background: var(--Accent-Accent-500, #fb654f);
+	}
+	&.white {
+		background: var(--Neutrals-neutral-100, #f1f0ef);
+	}
+	&.gray {
+		background: var(--Neutrals-neutral-800, #796f64);
+	}
+}
+
+.btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 16px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+
+	font-family: Mariupol;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: -0.14px;
+
+	&.orange {
+		background: var(--Accent-Accent-500, #fb654f);
+		color: var(--Neutrals-neutral-000, #fefeff);
+	}
+	&.white {
+		background: var(--Neutrals-neutral-100, #f1f0ef);
+		color: var(--Neutrals-neutral-800, #796f64);
+	}
+	&.gray {
+		background: var(--Neutrals-neutral-800, #796f64);
+		color: var(--Neutrals-neutral-000, #fefeff);
+	}
+}
+
+/* ДЕСКТОПНІ СТАНИ*/
+@media (hover: hover) and (pointer: fine) {
+	.icon,
+	.btn {
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
+
+		&.orange {
+			&:hover {
+				background: var(--Accent-Accent-600, #c7503f);
+			}
+			&:active {
+				background: var(--Accent-Accent-600, #c7503f);
+			}
+		}
+
+		&.white {
+			&:hover {
+				background: var(--Neutrals-neutral-200, #e3e1e0);
+			}
+			&:active {
+				background: var(--Neutrals-neutral-200, #e3e1e0);
+			}
+		}
+
+		&.gray {
+			&:hover {
+				background: var(--Neutrals-neutral-900, #59514a);
+			}
+			&:active {
+				background: var(--Neutrals-neutral-900, #59514a);
+			}
+		}
+	}
+}
+
+body {
+	background: #6c6c6c;
 }

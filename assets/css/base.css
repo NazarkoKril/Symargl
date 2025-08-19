@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -55,4 +56,114 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color_black);
+}
+
+/* БАЗОВІ СТИЛІ */
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.icon.orange {
+  background: var(--Accent-Accent-500, #fb654f);
+}
+.icon.white {
+  background: var(--Neutrals-neutral-100, #f1f0ef);
+}
+.icon.gray {
+  background: var(--Neutrals-neutral-800, #796f64);
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  font-family: Mariupol;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.14px;
+}
+.btn.orange {
+  background: var(--Accent-Accent-500, #fb654f);
+  color: var(--Neutrals-neutral-000, #fefeff);
+}
+.btn.white {
+  background: var(--Neutrals-neutral-100, #f1f0ef);
+  color: var(--Neutrals-neutral-800, #796f64);
+}
+.btn.gray {
+  background: var(--Neutrals-neutral-800, #796f64);
+  color: var(--Neutrals-neutral-000, #fefeff);
+}
+
+/* ДЕСКТОПНІ СТАНИ*/
+@media (hover: hover) and (pointer: fine) {
+  .icon:focus-visible,
+  .btn:focus-visible {
+    outline: 1px solid #fb654f;
+    outline-offset: 2px;
+  }
+  .icon.orange:hover,
+  .btn.orange:hover {
+    background: var(--Accent-Accent-600, #c7503f);
+  }
+  .icon.orange:active,
+  .btn.orange:active {
+    background: var(--Accent-Accent-600, #c7503f);
+  }
+  .icon.white:hover,
+  .btn.white:hover {
+    background: var(--Neutrals-neutral-200, #e3e1e0);
+  }
+  .icon.white:active,
+  .btn.white:active {
+    background: var(--Neutrals-neutral-200, #e3e1e0);
+  }
+  .icon.gray:hover,
+  .btn.gray:hover {
+    background: var(--Neutrals-neutral-900, #59514a);
+  }
+  .icon.gray:active,
+  .btn.gray:active {
+    background: var(--Neutrals-neutral-900, #59514a);
+  }
+}
+body {
+  background: #6c6c6c;
 }
