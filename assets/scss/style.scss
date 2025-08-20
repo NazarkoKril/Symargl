@@ -470,6 +470,46 @@ cursor: pointer;
   }
 }
 
+.cta-section {
+  padding: 100px 0;
+
+  .cta-header {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110.00000000000001%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--Neutrals-neutral-1000, #1A1715); 
+    margin-bottom: 20px;
+
+    span {
+      color: var(--Accent-Accent-500, #FB654F);
+    }
+  }
+
+  .cta-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1%;
+    text-align: center;
+    color: var(--Neutrals-neutral-800, #796F64);
+    margin-bottom: 40px;
+  }
+
+  .cta-form {
+    margin: 0 auto;
+    width: 264px;
+
+    .input-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  button {
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 500px) {
   .cart-item {
