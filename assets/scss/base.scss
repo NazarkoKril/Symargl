@@ -58,7 +58,7 @@ img {
 	padding: 8px;
 	border: 1px solid transparent;
 	cursor: pointer;
-	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+	transition: background 0.3s linear, outline-color 0.2s;
 
 	&.orange {
 		background: var(--Accent-Accent-500, #fb654f);
@@ -103,80 +103,81 @@ img {
 }
 
 .input-box {
-  label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    color: var(--Neutrals-neutral-800, #796F64);
-  }
-
-  .input {
-    position: relative;
-
-    input, textarea {
-      padding: 12px 0;
-	  border: none;
-      border-bottom: 0.5px solid var(--Neutrals-neutral-400, #C9C5C1);
-      color: var(--Neutrals-neutral-1000, #1A1715);;
-      width: 100%;
-      outline: none;
-      transition: var(--trans);
-	  font-weight: 400;
-	  font-size: 14px;
-	  line-height: 16px;
-
-      &::placeholder {
-          color: var(--Neutrals-neutral-400, #C9C5C1);
-      }
-
-      &:focus {
-          border-bottom: 0.5px solid var(--Neutrals-neutral-800, #796F64);
-      }
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      right: 8px;
-      top: 12px;
-      background: none;
-      border: none;
-    }
-  }
-
-  &:has(.input.error) {
-    label {
-      color: var(--semantic-s-error, #FB654F);
-    }
-
-	.input-text {
-		color: var(--semantic-s-error, #FB654F);
-		display: block;
+	label {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--Neutrals-neutral-800, #796f64);
 	}
 
 	.input {
-		border-bottom: 0.5px solid var(--semantic-s-error, #FB654F);
-	}
-  }
+		position: relative;
 
-  &:has(input:disabled) {
-	label {
-		color: var(--Neutrals-neutral-400, #C9C5C1);
+		input,
+		textarea {
+			padding: 12px 0;
+			border: none;
+			border-bottom: 0.5px solid var(--Neutrals-neutral-400, #c9c5c1);
+			color: var(--Neutrals-neutral-1000, #1a1715);
+			width: 100%;
+			outline: none;
+			transition: var(--trans);
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+
+			&::placeholder {
+				color: var(--Neutrals-neutral-400, #c9c5c1);
+			}
+
+			&:focus {
+				border-bottom: 0.5px solid var(--Neutrals-neutral-800, #796f64);
+			}
+		}
+
+		svg {
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			right: 8px;
+			top: 12px;
+			background: none;
+			border: none;
+		}
 	}
 
-	input {
-		color: var(--Neutrals-neutral-200, #E3E1E0);
-	}
-  }
+	&:has(.input.error) {
+		label {
+			color: var(--semantic-s-error, #fb654f);
+		}
 
-  .input-text {
-	margin-top: 8px;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 14px;
-	display: none;
-  }
+		.input-text {
+			color: var(--semantic-s-error, #fb654f);
+			display: block;
+		}
+
+		.input {
+			border-bottom: 0.5px solid var(--semantic-s-error, #fb654f);
+		}
+	}
+
+	&:has(input:disabled) {
+		label {
+			color: var(--Neutrals-neutral-400, #c9c5c1);
+		}
+
+		input {
+			color: var(--Neutrals-neutral-200, #e3e1e0);
+		}
+	}
+
+	.input-text {
+		margin-top: 8px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		display: none;
+	}
 }
 
 /* ДЕСКТОПНІ СТАНИ*/
@@ -215,8 +216,24 @@ img {
 			}
 		}
 	}
-}
+	.header__link {
+	
+	&:active {
+		color: var(--Neutrals-neutral-800, #796f64);
+	}
+	&:focus-visible {
+		outline: 1px solid #fb654f;
+		outline-offset: 2px;
+	}
+	}
+	.footer__link{
+		&:focus-visible {
+		outline: 1px solid #fb654f;
+		outline-offset: 2px;
+	}
+	&:active{
+		color: var(--Neutrals-neutral-000, #bcbcbc) !important;
 
-body {
-	background: #6c6c6c;
+	}
+	}
 }

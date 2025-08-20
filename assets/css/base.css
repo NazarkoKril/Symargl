@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Mariupol", sans-serif;
   text-decoration: none;
   list-style: none;
@@ -31,7 +32,10 @@ body {
 img {
   width: 100%;
   display: block;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -46,6 +50,7 @@ img {
 ::-webkit-scrollbar-thumb {
   background: rgba(16, 16, 16, 0.8980392157);
   border-radius: 6px;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
@@ -55,14 +60,24 @@ img {
 
 /* БАЗОВІ СТИЛІ */
 .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+  -webkit-transition: background 0.3s linear, outline-color 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s;
 }
 .icon.orange {
   background: var(--Accent-Accent-500, #fb654f);
@@ -75,14 +90,26 @@ img {
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 16px;
   border: 1px solid transparent;
   cursor: pointer;
+  -webkit-transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, -webkit-box-shadow 0.2s;
   transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
+  transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
   font-family: Mariupol;
   font-size: 14px;
   font-style: normal;
@@ -107,28 +134,44 @@ img {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: var(--Neutrals-neutral-800, #796F64);
+  color: var(--Neutrals-neutral-800, #796f64);
 }
 .input-box .input {
   position: relative;
 }
-.input-box .input input, .input-box .input textarea {
+.input-box .input input,
+.input-box .input textarea {
   padding: 12px 0;
   border: none;
-  border-bottom: 0.5px solid var(--Neutrals-neutral-400, #C9C5C1);
-  color: var(--Neutrals-neutral-1000, #1A1715);
+  border-bottom: 0.5px solid var(--Neutrals-neutral-400, #c9c5c1);
+  color: var(--Neutrals-neutral-1000, #1a1715);
   width: 100%;
   outline: none;
+  -webkit-transition: var(--trans);
   transition: var(--trans);
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
-.input-box .input input::placeholder, .input-box .input textarea::placeholder {
-  color: var(--Neutrals-neutral-400, #C9C5C1);
+.input-box .input input::-webkit-input-placeholder, .input-box .input textarea::-webkit-input-placeholder {
+  color: var(--Neutrals-neutral-400, #c9c5c1);
 }
-.input-box .input input:focus, .input-box .input textarea:focus {
-  border-bottom: 0.5px solid var(--Neutrals-neutral-800, #796F64);
+.input-box .input input::-moz-placeholder, .input-box .input textarea::-moz-placeholder {
+  color: var(--Neutrals-neutral-400, #c9c5c1);
+}
+.input-box .input input:-ms-input-placeholder, .input-box .input textarea:-ms-input-placeholder {
+  color: var(--Neutrals-neutral-400, #c9c5c1);
+}
+.input-box .input input::-ms-input-placeholder, .input-box .input textarea::-ms-input-placeholder {
+  color: var(--Neutrals-neutral-400, #c9c5c1);
+}
+.input-box .input input::placeholder,
+.input-box .input textarea::placeholder {
+  color: var(--Neutrals-neutral-400, #c9c5c1);
+}
+.input-box .input input:focus,
+.input-box .input textarea:focus {
+  border-bottom: 0.5px solid var(--Neutrals-neutral-800, #796f64);
 }
 .input-box .input svg {
   width: 16px;
@@ -140,20 +183,20 @@ img {
   border: none;
 }
 .input-box:has(.input.error) label {
-  color: var(--semantic-s-error, #FB654F);
+  color: var(--semantic-s-error, #fb654f);
 }
 .input-box:has(.input.error) .input-text {
-  color: var(--semantic-s-error, #FB654F);
+  color: var(--semantic-s-error, #fb654f);
   display: block;
 }
 .input-box:has(.input.error) .input {
-  border-bottom: 0.5px solid var(--semantic-s-error, #FB654F);
+  border-bottom: 0.5px solid var(--semantic-s-error, #fb654f);
 }
 .input-box:has(input:disabled) label {
-  color: var(--Neutrals-neutral-400, #C9C5C1);
+  color: var(--Neutrals-neutral-400, #c9c5c1);
 }
 .input-box:has(input:disabled) input {
-  color: var(--Neutrals-neutral-200, #E3E1E0);
+  color: var(--Neutrals-neutral-200, #e3e1e0);
 }
 .input-box .input-text {
   margin-top: 8px;
@@ -194,7 +237,18 @@ img {
   .btn.gray:active {
     background: var(--Neutrals-neutral-900, #59514a);
   }
-}
-body {
-  background: #6c6c6c;
+  .header__link:active {
+    color: var(--Neutrals-neutral-800, #796f64);
+  }
+  .header__link:focus-visible {
+    outline: 1px solid #fb654f;
+    outline-offset: 2px;
+  }
+  .footer__link:focus-visible {
+    outline: 1px solid #fb654f;
+    outline-offset: 2px;
+  }
+  .footer__link:active {
+    color: var(--Neutrals-neutral-000, #bcbcbc) !important;
+  }
 }
