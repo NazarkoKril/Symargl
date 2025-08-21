@@ -5,6 +5,7 @@
 	font-family: "Mariupol", sans-serif;
 	text-decoration: none;
 	list-style: none;
+	cursor: none !important;
 }
 
 .container {
@@ -26,6 +27,7 @@ html {
 }
 body {
 	background-color: #fff;
+	
 }
 
 img {
@@ -59,7 +61,7 @@ img {
 	align-items: center;
 	padding: 8px;
 	border: 1px solid transparent;
-	cursor: pointer;
+	
 	transition: background 0.3s linear, outline-color 0.2s;
 
 	&.orange {
@@ -80,7 +82,7 @@ img {
 	align-items: center;
 	padding: 10px 16px;
 	border: 1px solid transparent;
-	cursor: pointer;
+	
 	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
 	width: fit-content;
 	font-family: Mariupol;
@@ -306,3 +308,38 @@ text-transform: uppercase;
 		}
 	}
 }
+
+
+  /* маленька точка */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #0097a7 !important;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+  }
+
+  /* обвід */
+  .cursor-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0097a7 !important;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s;
+  }
+
+  .cursor-border.hover {
+    width: 80px;
+    height: 80px;
+  }

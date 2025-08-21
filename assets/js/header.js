@@ -1,5 +1,8 @@
     const header = document.querySelectorAll('.header_component')
-    const headerComponent =`    <header>
+    const headerComponent =`
+    <div class="cursor"></div>
+    <div class="cursor-border"></div>
+    <header>
         <div class="header__container">
             <nav class="header__nav">
                 <ul class="header__list left">
