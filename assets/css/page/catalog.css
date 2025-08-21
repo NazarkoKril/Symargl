@@ -188,17 +188,102 @@
   gap: 8px;
   margin-top: auto;
 }
-.filters #filters-close-btn {
+
+.menu {
+  width: 245px;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: var(--Neutrals-neutral-000, #FEFEFF);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 999;
+  transition: var(--trans);
+}
+.menu.open {
+  left: 0;
+}
+.menu-container {
+  padding: 20px 20px 20px 8px;
+  overflow: auto;
+  max-height: 100vh;
+  height: 100vh;
+}
+.menu-container h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: var(--Neutrals-neutral-1000, #1A1715);
+  margin-left: 12px;
+}
+.menu-list {
+  margin-top: 32px;
+}
+.menu-list h6 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -1%;
+  color: var(--Neutrals-neutral-800, #796F64);
+  margin-bottom: 12px;
+  margin-left: 12px;
+}
+.menu-list li {
+  display: block;
+}
+.menu-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -4%;
+  color: var(--Neutrals-neutral-600, #AEA8A2);
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: var(--trans);
+  position: relative;
+}
+.menu-item:active {
+  color: var(--Neutrals-neutral-800, #796F64);
+}
+.menu-item:focus-visible {
+  outline: 1px solid #fb654f;
+  outline-offset: 2px;
+}
+.menu-item.active {
+  color: var(--Neutrals-neutral-800, #796F64);
+}
+.menu-item.active::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--Neutrals-neutral-800, #796f64);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  z-index: 1;
+}
+.menu-item:disabled {
+  color: var(--Neutrals-neutral-400, #C9C5C1);
+}
+
+body:has(.filters.open), body:has(.menu.open) {
+  overflow: hidden;
+}
+
+.close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.filters #filters-close-btn img {
+.close-btn img {
   transform: rotate(45deg);
-}
-
-body:has(.filters.open) {
-  overflow: hidden;
 }
 
 .overlay {
@@ -208,9 +293,12 @@ body:has(.filters.open) {
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
   backdrop-filter: blur(10px);
   background: var(--Neutrals-neutral-50, rgba(121, 111, 100, 0.0509803922));
+  transition: var(--trans);
 }
 .overlay.open {
   z-index: 998;
+  opacity: 1;
 }
