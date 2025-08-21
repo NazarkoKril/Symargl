@@ -25,7 +25,37 @@
                 <button type="submit" class="btn orange">Про нас</button>
             </div>
         </section>
-        
+        <button id="menu-btn">j</button>
+        <button id="filters-btn">y</button>
+        <aside class="menu">
+            <div class="menu-container">
+                <h5>Каталог</h5>
+                <section class="menu-list">
+                    <h6>Асортимент</h6>
+                    <ul>
+                        <li><button class="menu-item">Усе</button></li>
+                        <li><button class="menu-item">Поло</button></li>
+                        <li><button class="menu-item">Футболки</button></li>
+                        <li><button class="menu-item">Светри поло</button></li>
+                        <li><button class="menu-item">Светри з круглою стійкою</button></li>
+                        <li><button class="menu-item">Джинси</button></li>
+                    </ul>
+                </section>
+                <section class="menu-list">
+                    <h6>Лукбуки</h6>
+                    <ul>
+                        <li><button class="menu-item">Чернігів</button></li>
+                        <li><button class="menu-item">Без шуму</button></li>
+                        <li><button class="menu-item">Твій ритм</button></li>
+                        <li><button class="menu-item">Чорне по білому</button></li>
+                        <li><button class="menu-item">Ненавʼязливий</button></li>
+                    </ul>
+                </section>
+            </div>
+            <button class="icon white close-btn" id="menu-close-btn">
+                <img src="/assets/img/icons/plus.svg" alt="">
+            </button>
+        </aside>
         <aside class="filters">
             <div class="filters-container">
                 <h5>фільтри</h5>
@@ -35,7 +65,7 @@
                             <div class="filter-name">
                                 <h6>Сортування</h6>
                             </div>
-                            <div class="filter-icon">
+                            <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2141_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                         <rect width="20" height="20" fill="#D9D9D9"/>
@@ -52,6 +82,9 @@
                                         <path d="M4.58398 10.625V9.375H15.4173V10.625H4.58398Z" fill="#796F64"/>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="filter-icon mobile">
+                                <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
                             </div>
                         </div>
                         <div class="filter-content">
@@ -81,7 +114,7 @@
                                 <h6>Матеріал</h6>
                                 <button id="material-drawer-btn">Як обрати матеріал?</button>
                             </div>
-                            <div class="filter-icon">
+                            <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2141_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                         <rect width="20" height="20" fill="#D9D9D9"/>
@@ -98,6 +131,9 @@
                                         <path d="M4.58398 10.625V9.375H15.4173V10.625H4.58398Z" fill="#796F64"/>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="filter-icon mobile">
+                                <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
                             </div>
                         </div>
                         <div class="filter-content">
@@ -122,7 +158,7 @@
                             <div class="filter-name">
                                 <h6>Колір</h6>
                             </div>
-                            <div class="filter-icon">
+                            <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2141_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                         <rect width="20" height="20" fill="#D9D9D9"/>
@@ -139,6 +175,9 @@
                                         <path d="M4.58398 10.625V9.375H15.4173V10.625H4.58398Z" fill="#796F64"/>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="filter-icon mobile">
+                                <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
                             </div>
                         </div>
                         <div class="filter-content colors">
@@ -177,7 +216,7 @@
                                 <p class="filter-number">(<span id="size__number">1</span>)</p>
                                 <button>Тблиця розмірів</button>
                             </div>
-                            <div class="filter-icon">
+                            <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2141_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                         <rect width="20" height="20" fill="#D9D9D9"/>
@@ -194,6 +233,9 @@
                                         <path d="M4.58398 10.625V9.375H15.4173V10.625H4.58398Z" fill="#796F64"/>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="filter-icon mobile">
+                                <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
                             </div>
                         </div>
                         <div class="filter-content sizes">
@@ -227,7 +269,7 @@
                                 <h6>Лукбук</h6>
                                 <p class="filter-number">(<span id="lookbook__number">1</span>)</p>
                             </div>
-                            <div class="filter-icon">
+                            <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2141_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                                         <rect width="20" height="20" fill="#D9D9D9"/>
@@ -244,6 +286,9 @@
                                         <path d="M4.58398 10.625V9.375H15.4173V10.625H4.58398Z" fill="#796F64"/>
                                     </g>
                                 </svg>
+                            </div>
+                            <div class="filter-icon mobile">
+                                <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
                             </div>
                         </div>
                         <div class="filter-content">
@@ -277,7 +322,7 @@
                     <button class="btn orange">Результати</button>
                 </div>
             </div>
-            <button class="icon white" id="filters-close-btn">
+            <button class="icon white close-btn" id="filters-close-btn">
                 <img src="/assets/img/icons/plus.svg" alt="">
             </button>
         </aside>
@@ -289,6 +334,7 @@
     <script src="../assets/js/header.js"></script>
     <script src="../assets/js/footer.js"></script>
     <script src="/assets/js/components/filters.js"></script>
+    <script src="/assets/js/components/catalog-menu.js"></script>
     
 </body>
 
