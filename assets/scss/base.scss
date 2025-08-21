@@ -18,7 +18,9 @@
 		padding: 0 20px;
 	}
 }
-
+main {
+	padding-top: 56px;
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -80,7 +82,7 @@ img {
 	border: 1px solid transparent;
 	cursor: pointer;
 	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
-
+	width: fit-content;
 	font-family: Mariupol;
 	font-size: 14px;
 	font-style: normal;
@@ -180,6 +182,75 @@ img {
 	}
 }
 
+.h1_title {
+	color: var(--Neutrals-neutral-1000, #1a1715);
+	font-family: Mariupol;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px; /* 100% */
+	text-transform: uppercase;
+	& .orange {
+		color: var(--Accent-Accent-500, #fb654f);
+	}
+}
+.h2_title {
+	color: var(--Neutrals-neutral-1000, #1a1715);
+	font-family: Mariupol;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+		& .orange {
+		color: var(--Accent-Accent-500, #fb654f);
+	}
+}
+.h3_title {
+	color: var(--Neutrals-neutral-1000, #1a1715);
+	font-family: Mariupol;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 22px; /* 110% */
+	text-transform: uppercase;
+		& .orange {
+		color: var(--Accent-Accent-500, #fb654f);
+	}
+}
+.h4_title {
+color: var(--Neutrals-neutral-1000, #1A1715);
+font-family: Mariupol;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 112.5% */
+text-transform: uppercase;
+		& .orange {
+		color: var(--Accent-Accent-500, #fb654f);
+	}
+}
+.h5_title {
+color: var(--Neutrals-neutral-1000, #1A1715);
+font-family: Mariupol;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 114.286% */
+text-transform: uppercase;
+		& .orange {
+		color: var(--Accent-Accent-500, #fb654f);
+	}
+}
+.sub_title {
+	color: var(--Neutrals-neutral-800, #796f64);
+	font-family: Mariupol;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px; /* 114.286% */
+	letter-spacing: -0.14px;
+}
 /* ДЕСКТОПНІ СТАНИ*/
 @media (hover: hover) and (pointer: fine) {
 	.icon,
@@ -217,23 +288,21 @@ img {
 		}
 	}
 	.header__link {
-	
-	&:active {
-		color: var(--Neutrals-neutral-800, #796f64);
-	}
-	&:focus-visible {
-		outline: 1px solid #fb654f;
-		outline-offset: 2px;
-	}
-	}
-	.footer__link{
+		&:active {
+			color: var(--Neutrals-neutral-800, #796f64);
+		}
 		&:focus-visible {
-		outline: 1px solid #fb654f;
-		outline-offset: 2px;
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
 	}
-	&:active{
-		color: var(--Neutrals-neutral-000, #bcbcbc) !important;
-
-	}
+	.footer__link {
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
+		&:active {
+			color: var(--Neutrals-neutral-000, #bcbcbc) !important;
+		}
 	}
 }

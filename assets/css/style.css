@@ -430,3 +430,211 @@
     margin-top: 0px;
   }
 }
+.hero__section {
+  padding-bottom: 20px;
+}
+.hero__section .btn {
+  margin-right: auto;
+  margin-left: auto;
+}
+.hero__section .sub_title {
+  margin-left: auto;
+  margin-right: 0px;
+  max-width: 220px;
+}
+
+.hero__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__section {
+  padding-block: 100px;
+}
+.slider__section .btn {
+  margin-right: auto;
+  margin-left: auto;
+}
+.slider__section .grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.slider__section .grid3 img {
+  height: 12px;
+}
+.slider__section .grid3 .sub_title {
+  max-width: 200px;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 40px;
+  height: 592px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.swiper-slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 552px;
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+  -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding-top: 52px;
+}
+
+.swiper-slide img {
+  height: 500px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.swiper-slide-active {
+  width: 440px !important;
+  opacity: 1;
+  z-index: 2;
+}
+.swiper-slide-active .slide_info {
+  opacity: 1;
+}
+.swiper-slide-active img {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+.slide_info {
+  margin-bottom: 12px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 200%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.slide_info .h5_title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.price_box_sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+.price_box_sale .new__price {
+  color: var(--Neutrals-neutral-800, #796f64);
+  /* m2 */
+  font-family: Mariupol;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: -0.64px;
+}
+.price_box_sale .old__price {
+  color: var(--Neutrals-neutral-600, #aea8a2);
+  /* m3 */
+  font-family: Mariupol;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.14px;
+}
+.price_box_sale .discount {
+  color: var(--Neutrals-neutral-000, #fefeff);
+  /* m4 */
+  font-family: Mariupol;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  position: absolute;
+  background: var(--Secondary-red-100, #fb654f);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: -26px;
+}
+
+.parallax-section {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: url(/assets/img/bg_parallax.png) no-repeat center/contain;
+}
+
+.parallax-content {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 20px;
+}
+.parallax-content .h3_title {
+  color: white;
+}
+.parallax-content .h3_title span {
+  color: black;
+}
