@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const helpAsides = document.querySelectorAll(".help-aside");
-    const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".overlay.right");
 
     helpAsides.forEach(item => {
         const closeBtn = item.querySelector(".close-btn");

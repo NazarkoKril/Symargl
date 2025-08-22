@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuAside = document.querySelector(".menu");
     const menuBtn = document.getElementById("menu-btn");
     const menuCloseBtn = document.getElementById("menu-close-btn");
-    const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".overlay.left");
 
     if (menuAside && menuBtn && menuCloseBtn && overlay) {
         menuBtn.addEventListener("click", () => {

@@ -379,14 +379,16 @@
                         <div class="left">
                             <p>Модель має розмір L і зріст 185 cm.</p>
                         </div>
-                        <div class="right">Ми рекомендуємо обирати розмір вашого светру відштовхуючись від обхвату грудей. Обираючи светр розмір в розмір, він сидітиме дещо обіймаючи по грудях та зі свободою в талії, як на наших фото. Або ж ви можете досягти іншої посадки, вибираючи светр на розмір більше або менше.</div>
+                        <div class="right">
+                            <p>Ми рекомендуємо обирати розмір вашого светру відштовхуючись від обхвату грудей. Обираючи светр розмір в розмір, він сидітиме дещо обіймаючи по грудях та зі свободою в талії, як на наших фото. Або ж ви можете досягти іншої посадки, вибираючи светр на розмір більше або менше.</p>
+                        </div>
                     </div>
                     <div class="size-table-tabs">
-                        <div class="tab">
-                            <input type="radio" name="size-table-tab" id="dimensional-grid-tab">
+                        <div class="tab" tabindex="0">
+                            <input type="radio" name="size-table-tab" id="dimensional-grid-tab" checked>
                             <label for="dimensional-grid-tab">Розмірна сітка</label>
                         </div>
-                        <div class="tab">
+                        <div class="tab" tabindex="0">
                             <input type="radio" name="size-table-tab" id="measurements-tab">
                             <label for="measurements-tab">Заміри виробу</label>
                         </div>
@@ -396,18 +398,18 @@
                             <div class="left">
                                 <p>Виберіть розмір</p>
                                 <ul>
-                                    <li><input type="radio" name="sizes" id="table-s"><label for="table-s">S</label></li>
-                                    <li><input type="radio" name="sizes" id="table-m"><label for="table-m">M</label></li>
-                                    <li><input type="radio" name="sizes" id="table-l"><label for="table-l">L</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xl"><label for="table-xl">XL</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xxl"><label for="table-xxl">XXL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-s" checked><label tabindex="0" for="table-s">S</label></li>
+                                    <li><input type="radio" name="sizes" id="table-m"><label tabindex="0" for="table-m">M</label></li>
+                                    <li><input type="radio" name="sizes" id="table-l"><label tabindex="0" for="table-l">L</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xl"><label tabindex="0" for="table-xl">XL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xxl"><label tabindex="0" for="table-xxl">XXL</label></li>
                                 </ul>
                             </div>
                             <div class="right">
                                 <p>Одиниця вимірювання</p>
                                 <ul>
-                                    <li><input type="radio" name="systems" id="santimeters"><label for="santimeters">Сантиметри</label></li>
-                                    <li><input type="radio" name="systems" id="inches"><label for="inches">Дюйми</label></li>
+                                    <li><input type="radio" name="systems" id="santimeters" checked><label for="santimeters" tabindex="0">Сантиметри</label></li>
+                                    <li><input type="radio" name="systems" id="inches"><label for="inches" tabindex="0">Дюйми</label></li>
                                 </ul>
                             </div>
                         </div>
@@ -416,7 +418,7 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>S</th>
+                                        <th class="selected">S</th>
                                         <th>M</th>
                                         <th>L</th>
                                         <th>XL</th>
@@ -426,7 +428,7 @@
                                 <tbody>
                                     <tr>
                                         <th>Довжина</th>
-                                        <td>64 см</td>
+                                        <td class="selected">64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
@@ -434,7 +436,7 @@
                                     </tr>
                                     <tr>
                                         <th>Довжина рукава</th>
-                                        <td>64 см</td>
+                                        <td class="selected">64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
@@ -442,7 +444,7 @@
                                     </tr>
                                     <tr>
                                         <th>Обхват грудей</th>
-                                        <td>64 см</td>
+                                        <td class="selected">64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
@@ -450,7 +452,7 @@
                                     </tr>
                                     <tr>
                                         <th>Ширина плечей</th>
-                                        <td>64 см</td>
+                                        <td class="selected">64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
                                         <td>64 см</td>
@@ -470,7 +472,7 @@
                                     <div class="measurements-info-block">
                                         <div class="measurements-info-block-number">1</div>
                                         <p class="measurements-info-block-name">Довжина</p>
-                                        <p>Замірте довжину  виробу від верху  до низу.</p>
+                                        <p>Замірте довжину виробу від верху до низу.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -499,8 +501,8 @@
                                 <div class="left">
                                     <p>Щоб вимірити обхват грудей виробу, покладіть його на рівну поверхню. Замірте ширину та помножте її на два.</p>
                                 </div>
-                                <div class="righ">
-                                    <p>Усі товари різні, адже вказані заміри можуть бути  не на 100 % точними.</p>
+                                <div class="right">
+                                    <p>Усі товари різні, адже вказані заміри можуть бути не на 100 % точними.</p>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +516,8 @@
                 </button>
             </aside>
         </aside>
-        <div class="overlay"></div>
+        <div class="overlay right"></div>
+        <div class="overlay left"></div>
     </main>
 
     <div class="footer_component"></div>
