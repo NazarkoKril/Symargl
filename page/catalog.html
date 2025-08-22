@@ -29,7 +29,7 @@
         <button id="filters-btn">y</button>
         <aside class="menu">
             <div class="menu-container">
-                <h5>Каталог</h5>
+                <h5 class="h5_title">Каталог</h5>
                 <section class="menu-list">
                     <h6>Асортимент</h6>
                     <ul>
@@ -53,12 +53,12 @@
                 </section>
             </div>
             <button class="icon white close-btn" id="menu-close-btn">
-                <img src="/assets/img/icons/plus.svg" alt="">
+                <img src="/assets/img/icons/close.svg" alt="">
             </button>
         </aside>
         <aside class="filters">
-            <div class="filters-container">
-                <h5>фільтри</h5>
+            <div class="aside-container">
+                <h5 class="h5_title">фільтри</h5>
                 <div class="filters-box">
                     <section class="filter">
                         <div class="filter-header" tabindex="0">
@@ -112,7 +112,7 @@
                         <div class="filter-header" tabindex="0">
                             <div class="filter-name">
                                 <h6>Матеріал</h6>
-                                <button id="material-drawer-btn">Як обрати матеріал?</button>
+                                <button id="materials-btn">Як обрати матеріал?</button>
                             </div>
                             <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@
                             <div class="filter-name">
                                 <h6>Розмір</h6>
                                 <p class="filter-number">(<span id="size__number">1</span>)</p>
-                                <button>Тблиця розмірів</button>
+                                <button id="size-table-btn">Тблиця розмірів</button>
                             </div>
                             <div class="filter-icon desktop">
                                 <svg class="plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -323,8 +323,196 @@
                 </div>
             </div>
             <button class="icon white close-btn" id="filters-close-btn">
-                <img src="/assets/img/icons/plus.svg" alt="">
+                <img src="/assets/img/icons/close.svg" alt="">
             </button>
+            <aside class="materials help-aside" data-target="materials">
+                <div class="aside-container">
+                    <h5 class="h5_title">Як обрати матеріал?</h5>
+                    <section class="materials-item">
+                        <div class="materials-item-header">
+                            <h6>Merino</h6>
+                            <p>Тонка вовна</p>
+                        </div>
+                        <div class="materials-item-photo">
+                            <img src="/assets/img/photo_material.png" alt="material">
+                        </div>
+                        <div class="materials-item-text">
+                            <p>Мікс з найкращої у світі вовни Merino, якості якої вдосконалені синтетичним волокном. Саме завдяки цьому вироби можна прати у пральній машині.</p>
+                        </div>
+                    </section>
+                    <section class="materials-item">
+                        <div class="materials-item-header">
+                            <h6>BestWool</h6>
+                            <p>Вовна</p>
+                        </div>
+                        <div class="materials-item-photo">
+                            <img src="/assets/img/photo_material.png" alt="material">
+                        </div>
+                        <div class="materials-item-text">
+                            <p>Мікс з найкращої у світі вовни Merino, якості якої вдосконалені синтетичним волокном. Саме завдяки цьому вироби можна прати у пральній машині.</p>
+                        </div>
+                    </section>
+                    <section class="materials-item">
+                        <div class="materials-item-header">
+                            <h6>CashWool</h6>
+                            <p>Кашемір</p>
+                        </div>
+                        <div class="materials-item-photo">
+                            <img src="/assets/img/photo_material.png" alt="material">
+                        </div>
+                        <div class="materials-item-text">
+                            <p>Мікс з найкращої у світі вовни Merino, якості якої вдосконалені синтетичним волокном. Саме завдяки цьому вироби можна прати у пральній машині.</p>
+                        </div>
+                    </section>
+                </div>
+                <button class="icon white back-btn">
+                    <img src="/assets/img/icons/arrow_back.svg" alt="">
+                </button>
+                <button class="icon white close-btn">
+                    <img src="/assets/img/icons/close.svg" alt="">
+                </button>
+            </aside>
+            <aside class="size-table help-aside" data-target="size-table">
+                <div class="aside-container">
+                    <h5 class="h5_title">Таблиця розмірів</h5>
+                    <div class="size-table-text">
+                        <div class="left">
+                            <p>Модель має розмір L і зріст 185 cm.</p>
+                        </div>
+                        <div class="right">Ми рекомендуємо обирати розмір вашого светру відштовхуючись від обхвату грудей. Обираючи светр розмір в розмір, він сидітиме дещо обіймаючи по грудях та зі свободою в талії, як на наших фото. Або ж ви можете досягти іншої посадки, вибираючи светр на розмір більше або менше.</div>
+                    </div>
+                    <div class="size-table-tabs">
+                        <div class="tab">
+                            <input type="radio" name="size-table-tab" id="dimensional-grid-tab">
+                            <label for="dimensional-grid-tab">Розмірна сітка</label>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="size-table-tab" id="measurements-tab">
+                            <label for="measurements-tab">Заміри виробу</label>
+                        </div>
+                    </div>
+                    <section class="tab-content" id="dimensional-grid">
+                        <div class="dimensional-setings">
+                            <div class="left">
+                                <p>Виберіть розмір</p>
+                                <ul>
+                                    <li><input type="radio" name="sizes" id="table-s"><label for="table-s">S</label></li>
+                                    <li><input type="radio" name="sizes" id="table-m"><label for="table-m">M</label></li>
+                                    <li><input type="radio" name="sizes" id="table-l"><label for="table-l">L</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xl"><label for="table-xl">XL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xxl"><label for="table-xxl">XXL</label></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <p>Одиниця вимірювання</p>
+                                <ul>
+                                    <li><input type="radio" name="systems" id="santimeters"><label for="santimeters">Сантиметри</label></li>
+                                    <li><input type="radio" name="systems" id="inches"><label for="inches">Дюйми</label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>S</th>
+                                        <th>M</th>
+                                        <th>L</th>
+                                        <th>XL</th>
+                                        <th>XXL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Довжина</th>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Довжина рукава</th>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Обхват грудей</th>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ширина плечей</th>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                        <td>64 см</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="tab-content" id="measurements">
+                        <div class="measurements-photo">
+                            <img src="/assets/img/measurements.png" alt="measurements">
+                        </div>
+                        <div class="measurements-info">
+                            <ul>
+                                <li>
+                                    <div class="measurements-info-block">
+                                        <div class="measurements-info-block-number">1</div>
+                                        <p class="measurements-info-block-name">Довжина</p>
+                                        <p>Замірте довжину  виробу від верху  до низу.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="measurements-info-block">
+                                        <div class="measurements-info-block-number">2</div>
+                                        <p class="measurements-info-block-name">Довжина рукава</p>
+                                        <p>Замірте довжину від верхньої точки пройми до нижнього краю рукава.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="measurements-info-block">
+                                        <div class="measurements-info-block-number">3</div>
+                                        <p class="measurements-info-block-name">Обхват грудей</p>
+                                        <p>Замірте ширину між проймами по найширшій частині грудної клітини.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="measurements-info-block">
+                                        <div class="measurements-info-block-number">4</div>
+                                        <p class="measurements-info-block-name">Ширина плечей</p>
+                                        <p>Замірте від найвищої лівої частини плеча до найвищої правої частини виробу.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="measurements-info-text">
+                                <div class="left">
+                                    <p>Щоб вимірити обхват грудей виробу, покладіть його на рівну поверхню. Замірте ширину та помножте її на два.</p>
+                                </div>
+                                <div class="righ">
+                                    <p>Усі товари різні, адже вказані заміри можуть бути  не на 100 % точними.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="icon white back-btn">
+                    <img src="/assets/img/icons/arrow_back.svg" alt="">
+                </button>
+                <button class="icon white close-btn">
+                    <img src="/assets/img/icons/close.svg" alt="">
+                </button>
+            </aside>
         </aside>
         <div class="overlay"></div>
     </main>
@@ -333,8 +521,10 @@
 
     <script src="../assets/js/header.js"></script>
     <script src="../assets/js/footer.js"></script>
+    <script src="/assets/js/script.js"></script>
     <script src="/assets/js/components/filters.js"></script>
     <script src="/assets/js/components/catalog-menu.js"></script>
+    <script src="/assets/js/components/help-aside.js"></script>
     
 </body>
 
