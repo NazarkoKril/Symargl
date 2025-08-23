@@ -10,6 +10,10 @@
   cursor: none !important;
 }
 
+html, body {
+  cursor: none !important;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -41,6 +45,7 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar {
@@ -308,7 +313,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 10000;
+  z-index: 999999;
 }
 
 .cursor-border {
@@ -322,7 +327,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999999;
   -webkit-transition: width 0.2s ease, height 0.2s ease, border-color 0.2s;
   transition: width 0.2s ease, height 0.2s ease, border-color 0.2s;
 }
