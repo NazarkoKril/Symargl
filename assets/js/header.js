@@ -1,5 +1,5 @@
-    const header = document.querySelectorAll('.header_component')
-    const headerComponent =`
+const header = document.querySelectorAll(".header_component");
+const headerComponent = `
     <div class="cursor"></div>
     <div class="cursor-border"></div>
     <header>
@@ -81,9 +81,7 @@
                 </div>
             </div>
         </div>
-    </header>`
-    header.forEach( (el) => {
-      return el.innerHTML = headerComponent
-    }
-    )
-
+    </header>`;
+header.forEach((el) => {
+	return (el.innerHTML = headerComponent);
+});

@@ -185,6 +185,10 @@
   .header__container {
     padding: 12px 20px;
   }
+  .header__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .header__mobile_container {
   position: fixed;
@@ -1166,10 +1170,12 @@
   }
 }
 @media (max-width: 500px) {
-  .swiper .swiper-slide-active, .swiper .swiper-slide {
+  .swiper .swiper-slide-active,
+  .swiper .swiper-slide {
     width: 335px !important;
   }
-  .slide__img .plus, .slide__img .like {
+  .slide__img .plus,
+  .slide__img .like {
     opacity: 1;
     visibility: visible;
   }

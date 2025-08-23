@@ -159,6 +159,10 @@
 	.header__container {
 		padding: 12px 20px;
 	}
+	.header__nav{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 .header__mobile_container {
 	position: fixed;
@@ -552,7 +556,6 @@
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	
 }
 .parallax__content {
 	position: relative;
@@ -716,11 +719,10 @@
 			margin-left: 235px;
 			width: 110px;
 			height: 185px;
-			img{
-			    height: 100%;
-    object-position: right;
+			img {
+				height: 100%;
+				object-position: right;
 			}
-
 		}
 		&__photo8 {
 			margin-right: 235px;
@@ -858,11 +860,11 @@
 		margin: 0 auto;
 	}
 }
-.lookbook__fixed{
-		.mob{
-			display: none;
-		}
+.lookbook__fixed {
+	.mob {
+		display: none;
 	}
+}
 @media (max-width: 840px) {
 	.hero__box {
 		grid-template-columns: 1fr;
@@ -885,7 +887,7 @@
 	.info_grid3 {
 		grid-template-columns: 1fr;
 		gap: 16px;
-		.h3_title{
+		.h3_title {
 			max-width: 400px;
 		}
 	}
@@ -900,135 +902,131 @@
 		max-width: 450px;
 		margin-left: 0px;
 	}
-	.parallax__section{
+	.parallax__section {
 		height: 500px;
 		background-size: cover;
 		background-position: left;
 	}
-	.lookbook__info{
-		.h3_title{
+	.lookbook__info {
+		.h3_title {
 			display: none;
 		}
-		.sub_title{
+		.sub_title {
 			display: none;
 		}
 	}
-	.lookbook__fixed{
-		.mob{
+	.lookbook__fixed {
+		.mob {
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
-			
 		}
 	}
-	.lookbook__info{
+	.lookbook__info {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 12px;
 	}
-	.lookbook__photo1{
+	.lookbook__photo1 {
 		margin-left: 0px;
 		margin-right: auto;
 	}
-	.lookbook__photo2{
+	.lookbook__photo2 {
 		margin-right: 0px;
 		margin-left: auto;
 		width: 335px;
 		height: 305px;
-		img{
+		img {
 			object-fit: cover;
 			height: 100%;
-			
 		}
 	}
-	.lookbook__photo7{
+	.lookbook__photo7 {
 		margin-left: 60px;
 		margin-right: auto;
 		margin-top: 24px;
 	}
-	.lookbook__photo8{
+	.lookbook__photo8 {
 		width: 335px;
 		height: 190px;
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 0px;
-		img{
+		img {
 			object-fit: cover;
 			height: 100%;
-			
 		}
 	}
-	.lookbook__section{
+	.lookbook__section {
 		padding-bottom: 50px;
 	}
-	.small__info{
+	.small__info {
 		align-items: start;
 		text-align: left;
-		
 	}
-	.small__info .sub_title{
+	.small__info .sub_title {
 		text-align: left;
 	}
-.card__grid{
-	grid-template-columns: 1fr;
-	gap: 32px;
-}
-.section__sweater .sweater__list {
-  max-width: 100%;      
-  width: 820px;          
-  margin: 0 auto;         
-  overflow: hidden;       
-  display: flex;
-  justify-content: center; 
-  gap: 16px;
-  margin-top: 20px;
-}
-.section__sweater .sweater__list > * {
-  flex-shrink: 0; 
-}
-.section__about .btn.gray{
-	margin-left: 0px;
-	margin-right: 40px;
-}
-.section__sweater .sweater_info{
-	position: relative;
-	opacity: 1;
-	visibility: visible;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 40px;
-	.sub_title{
+	.card__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+	.section__sweater .sweater__list {
+		max-width: 100%;
+		width: 820px;
+		margin: 0 auto;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+		margin-top: 20px;
+	}
+	.section__sweater .sweater__list > * {
+		flex-shrink: 0;
+	}
+	.section__about .btn.gray {
 		margin-left: 0px;
-		margin-top: 12px;
-		max-width: 400px;
+		margin-right: 40px;
 	}
-	.h3_title{
-		max-width: 400px;
+	.section__sweater .sweater_info {
+		position: relative;
+		opacity: 1;
+		visibility: visible;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+		.sub_title {
+			margin-left: 0px;
+			margin-top: 12px;
+			max-width: 400px;
+		}
+		.h3_title {
+			max-width: 400px;
+		}
+	}
+	.section__about .about_photo {
+		height: 450px;
+		margin-top: 60px;
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.card__item .card__img {
+		max-height: 350px;
 	}
 }
-.section__about .about_photo{
-	height: 450px;
-	margin-top: 60px;
-	img{
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-}
-	.card__item .card__img{
-		max-height:350px ;
-	}
 
-}
-
-@media (max-width:500px) {
-	.swiper .swiper-slide-active, .swiper .swiper-slide {
-	width: 335px !important;
-}
-	.slide__img .plus, .slide__img .like{
+@media (max-width: 500px) {
+	.swiper .swiper-slide-active,
+	.swiper .swiper-slide {
+		width: 335px !important;
+	}
+	.slide__img .plus,
+	.slide__img .like {
 		opacity: 1;
 		visibility: visible;
 	}
-
 }
