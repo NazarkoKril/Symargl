@@ -5,10 +5,11 @@
 	font-family: "Mariupol", sans-serif;
 	text-decoration: none;
 	list-style: none;
-	  cursor: none !important;
+	cursor: none !important;
 }
-html, body {
-  cursor: none !important;
+html,
+body {
+	cursor: none !important;
 }
 .container {
 	width: 100%;
@@ -439,6 +440,24 @@ img {
 			.card__img {
 				opacity: 0.8;
 			}
+		}
+	}
+	.slide__img {
+		&:hover {
+			.plus {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
+	}
+	.swiper-slide-active .slide__img:hover{
+		.like{
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

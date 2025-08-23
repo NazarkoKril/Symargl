@@ -10,7 +10,8 @@
   cursor: none !important;
 }
 
-html, body {
+html,
+body {
   cursor: none !important;
 }
 
@@ -484,6 +485,18 @@ img {
   }
   .card__item:active .card__img {
     opacity: 0.8;
+  }
+  .slide__img:hover .plus {
+    opacity: 1;
+    visibility: visible;
+  }
+  .slide__img:focus-visible {
+    outline: 1px solid #fb654f;
+    outline-offset: 2px;
+  }
+  .swiper-slide-active .slide__img:hover .like {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .section__title {

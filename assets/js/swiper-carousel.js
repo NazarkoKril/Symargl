@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let direction = 1; // 1 = вправо, -1 = вліво
+    let direction = 1; 
     
     const swiper = new Swiper('.mySwiper', {
         slidesPerView: 'auto',
@@ -14,27 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 3000,
         freeMode: true,
         autoplay: {
-            delay: 0,
+            delay: 500,
             pauseOnMouseEnter: true,
-            disableOnInteraction: false, // Важливо!
+            disableOnInteraction: false, 
             reverseDirection: false,
         },
         navigation: false,
         pagination: false,
         on: {
             reachEnd: function() {
-                // Досягли кінця (рухаючись вправо)
+             
                 setTimeout(() => {
-                    // Змінюємо напрямок на зворотний
+                 
                     this.autoplay.stop();
                     this.params.autoplay.reverseDirection = true;
                     this.autoplay.start();
                 }, 1000);
             },
             reachBeginning: function() {
-                // Повернулися до початку (рухаючись вліво)
+              
                 setTimeout(() => {
-                    // Змінюємо напрямок на прямий
+                  
                     this.autoplay.stop();
                     this.params.autoplay.reverseDirection = false;
                     this.autoplay.start();

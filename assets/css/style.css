@@ -495,7 +495,7 @@
   padding-top: 52px;
 }
 
-.swiper-slide img {
+.swiper-slide .slide__photo {
   height: 500px !important;
   -o-object-fit: cover;
      object-fit: cover;
@@ -510,7 +510,7 @@
 .swiper-slide-active .slide_info {
   opacity: 1;
 }
-.swiper-slide-active img {
+.swiper-slide-active .slide__photo {
   -webkit-transform: translateY(0px) !important;
           transform: translateY(0px) !important;
 }
@@ -530,6 +530,36 @@
 .slide_info .h5_title {
   text-align: center;
   margin-bottom: 4px;
+}
+
+.slide__img {
+  position: relative;
+}
+.slide__img .plus {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+.slide__img .plus:focus {
+  outline: none;
+}
+.slide__img .like {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+.slide__img .like:focus {
+  outline: none;
 }
 
 .price_box_sale {
@@ -593,8 +623,48 @@
   right: -26px;
 }
 
-.parallax__container {
+.price_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+.price_box .price {
+  color: var(--Neutrals-neutral-800, #796f64);
+  /* m2 */
+  font-family: Mariupol;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: -0.64px;
+}
+
+.parallax-lookbook-wrapper {
+  position: relative;
+}
+
+.parallax__section {
   height: 600px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.parallax__container {
+  height: 100%;
   position: relative;
   overflow: hidden;
   background: url(/assets/img/bg_parallax.png) no-repeat center/contain;
@@ -626,6 +696,9 @@
 }
 
 .lookbook__section {
+  position: relative;
+  z-index: 2;
+  background: white;
   padding-block: 100px;
 }
 .lookbook__section img {
@@ -820,11 +893,11 @@
   line-height: 110%;
   text-align: center;
   text-transform: uppercase;
-  color: var(--Neutrals-neutral-1000, #1A1715);
+  color: var(--Neutrals-neutral-1000, #1a1715);
   margin-bottom: 20px;
 }
 .cta-section .cta-header span {
-  color: var(--Accent-Accent-500, #FB654F);
+  color: var(--Accent-Accent-500, #fb654f);
 }
 .cta-section .cta-text {
   font-weight: 400;
@@ -832,7 +905,7 @@
   line-height: 16px;
   letter-spacing: -1%;
   text-align: center;
-  color: var(--Neutrals-neutral-800, #796F64);
+  color: var(--Neutrals-neutral-800, #796f64);
   margin-bottom: 40px;
 }
 .cta-section .cta-form {
