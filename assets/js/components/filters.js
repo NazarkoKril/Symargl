@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filtersAside = document.querySelector(".filters");
     const filtersBtn = document.getElementById("filters-btn");
     const filtersCloseBtn = document.getElementById("filters-close-btn");
-    const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".overlay.right");
 
     if (filtersAside && filtersBtn && filtersCloseBtn && overlay) {
         filtersBtn.addEventListener("click", () => {
