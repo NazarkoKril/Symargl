@@ -7,19 +7,19 @@ class SweaterScrollAnimation {
         this.sweaterAnimation = document.querySelector('.sweater__animation');
         
         this.config = {
-            initialWidth: 1400,
-            minWidth: 460,
+            initialWidthPercent: 100, 
+            minWidthPercent: 35,      
             scrollSteps: 200
         };
         
         this.isScrollBlocked = false;
-        this.currentWidth = this.config.initialWidth;
+        this.currentWidthPercent = this.config.initialWidthPercent;
         this.scrollStep = 0;
         this.animationComplete = false;
         this.animationStartScrollY = 0;
-        this.isReverseAnimation = false; // Новий флаг для зворотної анімації
-        this.lastScrollY = 0; // Для відстеження напряму скролу
-        this.canStartNewAnimation = true; // Флаг для контролю нових анімацій
+        this.isReverseAnimation = false;
+        this.lastScrollY = 0;
+        this.canStartNewAnimation = true;
         
         this.init();
     }
@@ -80,7 +80,7 @@ class SweaterScrollAnimation {
         const currentScrollY = window.scrollY;
         const scrollDirection = currentScrollY > this.lastScrollY ? 'down' : 'up';
         
-        // Налаштування тригеру залежно від розміру екрану
+        
         let triggerOffset = 70;
         const screenWidth = window.innerWidth;
         
@@ -92,21 +92,21 @@ class SweaterScrollAnimation {
             triggerOffset = 70; 
         }
 
-        // Звичайна анімація при скролі вниз
+        
         if (scrollDirection === 'down' && imgRect.top <= triggerOffset && imgRect.bottom > 0) {
             if (!this.isScrollBlocked && !this.animationComplete && this.canStartNewAnimation) {
                 this.startAnimation(false);
             }
         }
 
-        // Зворотна анімація при скролі вгору - коли верх екрану дійшов до верху зображення
+       
         if (scrollDirection === 'up' && this.animationComplete && imgRect.top >= 0 && imgRect.top <= 10) {
             if (!this.isScrollBlocked && this.canStartNewAnimation) {
                 this.startAnimation(true);
             }
         }
 
-        // Скидання анімації якщо зображення вийшло за межі екрану
+        
         if (imgRect.bottom < -100 && this.isScrollBlocked && !this.isReverseAnimation) {
             this.resetAnimation();
         }
@@ -118,19 +118,19 @@ class SweaterScrollAnimation {
         this.animationStartScrollY = window.scrollY;
         
         if (isReverse) {
-            // Для зворотної анімації починаємо з мінімального розміру
+            
             this.scrollStep = this.config.scrollSteps;
-            this.currentWidth = this.config.minWidth;
+            this.currentWidthPercent = this.config.minWidthPercent;
             this.animationComplete = false;
         } else {
-            // Для звичайної анімації починаємо з максимального розміру
+            
             this.scrollStep = 0;
-            this.currentWidth = this.config.initialWidth;
+            this.currentWidthPercent = this.config.initialWidthPercent;
         }
         
         const img = this.sweaterImg.querySelector('img');
         if (img) {
-            img.style.width = this.currentWidth + 'px';
+            img.style.width = this.currentWidthPercent + '%';
             img.style.maxWidth = 'none';
         }
         
@@ -156,31 +156,31 @@ class SweaterScrollAnimation {
     
     updateAnimation(step) {
         if (this.isReverseAnimation) {
-            // Зворотна анімація: при скролі вгору (step = -1) збільшуємо картинку
-            if (step < 0) { // Скрол вгору
-                this.scrollStep -= 1; // Зменшуємо scrollStep щоб збільшити картинку
-            } else { // Скрол вниз
-                this.scrollStep += 1; // Збільшуємо scrollStep щоб зменшити картинку
+            
+            if (step < 0) { 
+                this.scrollStep -= 1;
+            } else {
+                this.scrollStep += 1; 
             }
             this.scrollStep = Math.max(0, Math.min(this.config.scrollSteps, this.scrollStep));
         } else {
-            // Звичайна анімація: зменшуємо картинку при скролі вниз
+            
             this.scrollStep += step;
             this.scrollStep = Math.max(0, Math.min(this.config.scrollSteps, this.scrollStep));
         }
         
         const progress = this.scrollStep / this.config.scrollSteps;
-        const widthRange = this.config.initialWidth - this.config.minWidth;
-        this.currentWidth = this.config.initialWidth - (widthRange * progress);
+        const widthRange = this.config.initialWidthPercent - this.config.minWidthPercent;
+        this.currentWidthPercent = this.config.initialWidthPercent - (widthRange * progress);
         
         const img = this.sweaterImg.querySelector('img');
         if (img) {
-            img.style.width = this.currentWidth + 'px';
+            img.style.width = this.currentWidthPercent + '%';
         }
         
         this.toggleTextVisibility();
         
-        // Перевіряємо завершення анімації
+        
         if (this.isReverseAnimation && this.scrollStep <= 0) {
             this.completeReverseAnimation();
         } else if (!this.isReverseAnimation && this.scrollStep >= this.config.scrollSteps) {
@@ -189,7 +189,7 @@ class SweaterScrollAnimation {
     }
     
     toggleTextVisibility() {
-        const isActive = this.currentWidth <= this.config.minWidth;
+        const isActive = this.currentWidthPercent <= this.config.minWidthPercent;
         
         if (isActive && !this.sweaterInfo.classList.contains('active')) {
             this.sweaterInfo.classList.add('active');
@@ -211,16 +211,16 @@ class SweaterScrollAnimation {
     }
     
     completeReverseAnimation() {
-        // Завершуємо зворотну анімацію і розблоковуємо скрол
+        
         this.animationComplete = false;
         this.isScrollBlocked = false;
         this.isReverseAnimation = false;
-        this.currentWidth = this.config.initialWidth;
+        this.currentWidthPercent = this.config.initialWidthPercent;
         
-        // Тимчасово заборонити нові анімації щоб дати час на вільний скрол
+        
         this.canStartNewAnimation = false;
         
-        // Розблоковуємо скрол повністю
+        
         document.body.style.overflow = '';
         
         const img = this.sweaterImg.querySelector('img');
@@ -229,15 +229,15 @@ class SweaterScrollAnimation {
             img.style.maxWidth = '';
         }
         
-        // Приховуємо текст після зворотної анімації
+        
         this.sweaterInfo.classList.remove('active');
         this.sweaterContent.classList.remove('text-active');
         this.sweaterAnimation.classList.remove('compact-view');
         
-        // Через невеликий час дозволяємо знову запускати анімації
+        
         setTimeout(() => {
             this.canStartNewAnimation = true;
-        }, 500); // Затримка 500мс для вільного скролу
+        }, 500); 
     }
     
     resetAnimation() {
@@ -245,7 +245,7 @@ class SweaterScrollAnimation {
         this.animationComplete = false;
         this.isReverseAnimation = false;
         this.scrollStep = 0;
-        this.currentWidth = this.config.initialWidth;
+        this.currentWidthPercent = this.config.initialWidthPercent;
         this.canStartNewAnimation = true;
         
         document.body.style.overflow = '';
@@ -268,39 +268,40 @@ class SweaterScrollAnimation {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sweaterAnimation = new SweaterScrollAnimation();
-    
-    const updateConfigForScreen = () => {
-        const screenWidth = window.innerWidth;
-        
-        if (screenWidth <= 480) {
-            sweaterAnimation.updateConfig({
-                initialWidth: 280,
-                minWidth: 200,
-                scrollSteps: 150
-            });
-        } else if (screenWidth <= 768) {
-            sweaterAnimation.updateConfig({
-                initialWidth: 400,
-                minWidth: 280,
-                scrollSteps: 170
-            });
-        } else if (screenWidth <= 1024) {
-            sweaterAnimation.updateConfig({
-                initialWidth: 600,
-                minWidth: 350,
-                scrollSteps: 180
-            });
-        } else {
-            sweaterAnimation.updateConfig({
-                initialWidth: 1400,
-                minWidth: 460,
-                scrollSteps: 200
-            });
-        }
-    };
-    
-    updateConfigForScreen();
-    
-    window.addEventListener('resize', updateConfigForScreen);
+    if (window.innerWidth > 840) {
+        const sweaterAnimation = new SweaterScrollAnimation();
+
+        const updateConfigForScreen = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth <= 480) {
+                sweaterAnimation.updateConfig({
+                    initialWidthPercent: 100,
+                    minWidthPercent: 45,
+                    scrollSteps: 150
+                });
+            } else if (screenWidth <= 768) {
+                sweaterAnimation.updateConfig({
+                    initialWidthPercent: 100,
+                    minWidthPercent: 40,
+                    scrollSteps: 170
+                });
+            } else if (screenWidth <= 1024) {
+                sweaterAnimation.updateConfig({
+                    initialWidthPercent: 100,
+                    minWidthPercent: 38,
+                    scrollSteps: 180
+                });
+            } else {
+                sweaterAnimation.updateConfig({
+                    initialWidthPercent: 100,
+                    minWidthPercent: 35,
+                    scrollSteps: 200
+                });
+            }
+        };
+
+        updateConfigForScreen();
+        window.addEventListener('resize', updateConfigForScreen);
+    }
 });

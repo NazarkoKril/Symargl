@@ -265,7 +265,8 @@ img {
 }
 
 // cursor
-.cursor {
+@media (min-width:500px) {
+	.cursor {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -296,6 +297,8 @@ img {
 	width: 80px;
 	height: 80px;
 }
+}
+
 
 // title small
 .small__info {
