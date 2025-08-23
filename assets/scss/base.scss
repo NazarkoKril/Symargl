@@ -12,7 +12,7 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 @media (max-width: 1050px) {
 	.container {
@@ -27,7 +27,6 @@ html {
 }
 body {
 	background-color: #fff;
-	
 }
 
 img {
@@ -61,14 +60,17 @@ img {
 	align-items: center;
 	padding: 8px;
 	border: 1px solid transparent;
-	
+
 	transition: background 0.3s linear, outline-color 0.2s;
 
 	&.orange {
 		background: var(--Accent-Accent-500, #fb654f);
 	}
-	&.white {
+	&.light_gray {
 		background: var(--Neutrals-neutral-100, #f1f0ef);
+	}
+	&.white {
+		background: var(--Neutrals-neutral-100, #fefeff);
 	}
 	&.gray {
 		background: var(--Neutrals-neutral-800, #796f64);
@@ -82,7 +84,7 @@ img {
 	align-items: center;
 	padding: 10px 16px;
 	border: 1px solid transparent;
-	
+	height: max-content;
 	transition: background 0.3s linear, outline-color 0.2s, box-shadow 0.2s;
 	width: fit-content;
 	font-family: Mariupol;
@@ -96,8 +98,12 @@ img {
 		background: var(--Accent-Accent-500, #fb654f);
 		color: var(--Neutrals-neutral-000, #fefeff);
 	}
-	&.white {
+	&.light_gray {
 		background: var(--Neutrals-neutral-100, #f1f0ef);
+		color: var(--Neutrals-neutral-800, #796f64);
+	}
+	&.white {
+		background: var(--Neutrals-neutral-100, #fefeff);
 		color: var(--Neutrals-neutral-800, #796f64);
 	}
 	&.gray {
@@ -204,7 +210,7 @@ img {
 	font-weight: 700;
 	line-height: 30px;
 	text-transform: uppercase;
-		& .orange {
+	& .orange {
 		color: var(--Accent-Accent-500, #fb654f);
 	}
 }
@@ -216,31 +222,31 @@ img {
 	font-weight: 700;
 	line-height: 22px; /* 110% */
 	text-transform: uppercase;
-		& .orange {
+	& .orange {
 		color: var(--Accent-Accent-500, #fb654f);
 	}
 }
 .h4_title {
-color: var(--Neutrals-neutral-1000, #1A1715);
-font-family: Mariupol;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 18px; /* 112.5% */
-text-transform: uppercase;
-		& .orange {
+	color: var(--Neutrals-neutral-1000, #1a1715);
+	font-family: Mariupol;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px; /* 112.5% */
+	text-transform: uppercase;
+	& .orange {
 		color: var(--Accent-Accent-500, #fb654f);
 	}
 }
 .h5_title {
-color: var(--Neutrals-neutral-1000, #1A1715);
-font-family: Mariupol;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 16px; /* 114.286% */
-text-transform: uppercase;
-		& .orange {
+	color: var(--Neutrals-neutral-1000, #1a1715);
+	font-family: Mariupol;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 16px; /* 114.286% */
+	text-transform: uppercase;
+	& .orange {
 		color: var(--Accent-Accent-500, #fb654f);
 	}
 }
@@ -253,6 +259,105 @@ text-transform: uppercase;
 	line-height: 16px; /* 114.286% */
 	letter-spacing: -0.14px;
 }
+
+// cursor
+.cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: #0097a7 !important;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 10000;
+}
+
+.cursor-border {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border: 2px solid #0097a7 !important;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 9999;
+	transition: width 0.2s ease, height 0.2s ease, border-color 0.2s;
+}
+
+.cursor-border.hover {
+	width: 80px;
+	height: 80px;
+}
+
+// title small
+.small__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.h3_title {
+		margin-bottom: 20px;
+	}
+	.sub_title {
+		margin-bottom: 40px;
+		max-width: 350px;
+		text-align: center;
+	}
+}
+
+.info_grid3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 12px;
+	margin-bottom: 24px;
+	img {
+		height: 12px;
+	}
+	.sub_title {
+		max-width: 200px;
+		margin-right: 0px;
+		margin-left: auto;
+	}
+	.h3_title {
+		max-width: 220px;
+	}
+}
+
+//card
+.card__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	position: relative;
+
+	.subphoto {
+		color: var(--Neutrals-neutral-1000, #1a1715);
+		text-align: center;
+		font-family: Mariupol;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px; /* 125% */
+		letter-spacing: -0.64px;
+		transition: opacity 0.3s linear;
+	}
+	.card__img {
+		transition: opacity 0.3s linear;
+	}
+	.icon {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		z-index: 1;
+	}
+}
+
 /* ДЕСКТОПНІ СТАНИ*/
 @media (hover: hover) and (pointer: fine) {
 	.icon,
@@ -264,16 +369,25 @@ text-transform: uppercase;
 
 		&.orange {
 			&:hover {
-				background: var(--Accent-Accent-600, #c7503f);
+				background: var(--Accent-Accent-600, #fb654f);
 			}
 			&:active {
 				background: var(--Accent-Accent-600, #c7503f);
 			}
 		}
 
+		&.light_gray {
+			&:hover {
+				background: var(--Neutrals-neutral-200, #f1f0ef);
+			}
+			&:active {
+				background: var(--Neutrals-neutral-200, #e3e1e0);
+			}
+		}
+
 		&.white {
 			&:hover {
-				background: var(--Neutrals-neutral-200, #e3e1e0);
+				background: var(--Neutrals-neutral-200, #fefeff);
 			}
 			&:active {
 				background: var(--Neutrals-neutral-200, #e3e1e0);
@@ -282,7 +396,7 @@ text-transform: uppercase;
 
 		&.gray {
 			&:hover {
-				background: var(--Neutrals-neutral-900, #59514a);
+				background: var(--Neutrals-neutral-900, #796f64);
 			}
 			&:active {
 				background: var(--Neutrals-neutral-900, #59514a);
@@ -307,39 +421,39 @@ text-transform: uppercase;
 			color: var(--Neutrals-neutral-000, #bcbcbc) !important;
 		}
 	}
+	.card__item {
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
+		&:active {
+			.icon {
+				background: var(--Neutrals-neutral-200, #e3e1e0);
+			}
+			.subphoto {
+				opacity: 0.8;
+			}
+			.card__img {
+				opacity: 0.8;
+			}
+		}
+	}
 }
-
-
-  /* маленька точка */
-  .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    background: #0097a7 !important;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 10000;
-  }
-
-  /* обвід */
-  .cursor-border {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #0097a7 !important;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s;
-  }
-
-  .cursor-border.hover {
-    width: 80px;
-    height: 80px;
-  }
+.section__title {
+	padding-block: 100px;
+	.big_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.h1_title {
+		max-width: 600px;
+		margin-bottom: 20px;
+	}
+	.sub_title {
+		max-width: 250px;
+		margin-bottom: 40px;
+	}
+}

@@ -20,6 +20,7 @@
   top: 0;
   background: var(--Neutrals-neutral-000, #fefeff);
   padding: 4px 8px;
+  z-index: 99999;
 }
 
 @media (min-width: 1920px) {
@@ -459,20 +460,6 @@
   margin-right: auto;
   margin-left: auto;
 }
-.slider__section .grid3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.slider__section .grid3 img {
-  height: 12px;
-}
-.slider__section .grid3 .sub_title {
-  max-width: 200px;
-  margin-right: 0px;
-  margin-left: auto;
-}
 
 .swiper {
   width: 100%;
@@ -606,14 +593,14 @@
   right: -26px;
 }
 
-.parallax-section {
+.parallax__container {
   height: 600px;
   position: relative;
   overflow: hidden;
   background: url(/assets/img/bg_parallax.png) no-repeat center/contain;
 }
 
-.parallax-content {
+.parallax__content {
   position: relative;
   height: 100%;
   display: -webkit-box;
@@ -631,9 +618,182 @@
           align-items: start;
   padding: 20px;
 }
-.parallax-content .h3_title {
+.parallax__content .h3_title {
   color: white;
 }
-.parallax-content .h3_title span {
+.parallax__content .h3_title span {
   color: black;
+}
+
+.lookbook__section {
+  padding-block: 100px;
+}
+.lookbook__section img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.lookbook__fixed {
+  height: 1600px;
+}
+.lookbook__list_img {
+  height: 100%;
+  position: relative;
+}
+.lookbook__list_img li {
+  overflow: hidden;
+  position: absolute;
+}
+.lookbook__photo1 {
+  width: 230px;
+  height: 305px;
+  top: 0px;
+  left: 235px;
+}
+.lookbook__photo2 {
+  width: 460px;
+  height: 305px;
+  top: 85px;
+  right: 235px;
+}
+.lookbook__photo3 {
+  width: 345px;
+  height: 305px;
+  top: 430px;
+  left: 350px;
+}
+.lookbook__photo4 {
+  width: 110px;
+  height: 185px;
+  top: 495px;
+  right: 330px;
+}
+.lookbook__photo5 {
+  width: 225px;
+  height: 305px;
+  top: 735px;
+  left: 470px;
+}
+.lookbook__photo6 {
+  width: 340px;
+  height: 400px;
+  bottom: 465px;
+  right: 235px;
+}
+.lookbook__photo7 {
+  width: 225px;
+  height: 250px;
+  bottom: 200px;
+  left: 235px;
+}
+.lookbook__photo8 {
+  width: 460px;
+  height: 320px;
+  bottom: 0px;
+  right: 350px;
+}
+.lookbook__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  position: sticky;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 400px;
+  z-index: 2;
+}
+.lookbook__info .h3_title {
+  max-width: 250px;
+}
+.lookbook__info .sub_title {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: 0px;
+}
+.lookbook__info a {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section__card {
+  padding-block: 100px;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.section__about {
+  padding-top: 100px;
+}
+.section__about .btn.gray {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+.section__about .about_photo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section__sweater .sweater__animation {
+  position: relative;
+}
+.section__sweater .sweater__list {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  gap: 16px;
+}
+.section__sweater .sweater__list .round {
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: var(--Neutrals-neutral-800, #796f64);
+}
+.section__sweater .btn {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+.section__sweater .sweater__img img {
+  margin-right: auto;
+  margin-left: auto;
+  aspect-ratio: 1/1;
+}
+.section__sweater .sweater_info {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+.section__sweater .sweater_info.active {
+  opacity: 1;
+  visibility: visible;
+}
+.section__sweater .sweater_info .h3_title {
+  max-width: 200px;
+}
+.section__sweater .sweater_info .sub_title {
+  margin-right: 0px;
+  margin-left: auto;
+  max-width: 220px;
 }
