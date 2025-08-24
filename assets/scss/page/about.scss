@@ -1,0 +1,34 @@
+.section__small_title{
+    padding-block: 100px;
+    .text{
+        display: flex;
+        align-items:baseline;
+        gap: 12px;
+    }
+    .sub_title{
+        max-width: 225px;
+    }
+}
+.hero__section{
+    .hero__box{
+        margin-bottom: 0px;
+    }
+}
+.section__sweater{
+    padding-block: 100px;
+}
+.section__title .sub_title{
+    max-width: 300px;
+}
+
+@media (max-width:840px) {
+    .section__small_title .text{
+        flex-direction: column;
+    }
+    .hero__section{
+        padding-bottom: 0px;
+    }
+    .section__sweater{
+        padding-block: 50px;
+    }
+}

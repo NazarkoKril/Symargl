@@ -129,6 +129,10 @@ img {
 }
 
 .input-box {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 100%;
 	label {
 		font-weight: 400;
 		font-size: 12px;
@@ -138,7 +142,7 @@ img {
 
 	.input {
 		position: relative;
-
+width: 100%;
 		input,
 		textarea {
 			padding: 12px 0;
@@ -151,7 +155,7 @@ img {
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 16px;
-
+width: 100%;
 			&::placeholder {
 				color: var(--Neutrals-neutral-400, #c9c5c1);
 			}
@@ -179,7 +183,8 @@ img {
 
 		.input-text {
 			color: var(--semantic-s-error, #fb654f);
-			display: block;
+			opacity: 1;
+			visibility: visible;
 		}
 
 		.input {
@@ -198,11 +203,14 @@ img {
 	}
 
 	.input-text {
-		margin-top: 8px;
+		margin-top: 6px;
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
-		display: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s linear;
+		
 	}
 }
 

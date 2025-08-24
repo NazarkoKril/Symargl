@@ -162,6 +162,19 @@ img {
     height: 16px;
   }
 }
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+}
 .input-box label {
   font-weight: 400;
   font-size: 12px;
@@ -170,6 +183,7 @@ img {
 }
 .input-box .input {
   position: relative;
+  width: 100%;
 }
 .input-box .input input,
 .input-box .input textarea {
@@ -184,6 +198,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  width: 100%;
 }
 .input-box .input input::-webkit-input-placeholder, .input-box .input textarea::-webkit-input-placeholder {
   color: var(--Neutrals-neutral-400, #c9c5c1);
@@ -219,7 +234,8 @@ img {
 }
 .input-box:has(.input.error) .input-text {
   color: var(--semantic-s-error, #fb654f);
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .input-box:has(.input.error) .input {
   border-bottom: 0.5px solid var(--semantic-s-error, #fb654f);
@@ -231,11 +247,14 @@ img {
   color: var(--Neutrals-neutral-200, #e3e1e0);
 }
 .input-box .input-text {
-  margin-top: 8px;
+  margin-top: 6px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .h1_title {
