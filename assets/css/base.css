@@ -152,6 +152,16 @@ img {
   color: var(--Neutrals-neutral-000, #fefeff);
 }
 
+@media (max-width: 840px) {
+  .icon {
+    padding: 4px;
+    margin: 8px;
+  }
+  .icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
 .input-box label {
   font-weight: 400;
   font-size: 12px;

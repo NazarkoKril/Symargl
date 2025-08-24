@@ -5,15 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     helpAsides.forEach(item => {
         const closeBtn = item.querySelector(".close-btn");
         const backBtn = item.querySelector(".back-btn");
-        const openBtn = document.getElementById(`${item.dataset.target}-btn`);
+        const openBtn = document.querySelectorAll(`[data-target="${item.dataset.aside}"]`);
 
-        openBtn.addEventListener("click", () => {
+        openBtn.forEach(btn => btn.addEventListener("click", e => {
+            e.stopPropagation();   
+            e.preventDefault();
+
             item.classList.add('open');
 
             if (!overlay.classList.contains('open')) {
                 overlay.classList.add('open');
             }
-        });
+        }));
 
         closeBtn.addEventListener("click", () => {
             item.classList.remove('open');
