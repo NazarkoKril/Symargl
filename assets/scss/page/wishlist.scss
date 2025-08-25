@@ -1,0 +1,121 @@
+.hero__section {
+    padding-top: 44px;
+    padding-bottom: 116px;
+
+    .hero__box {
+        margin-bottom: 0;
+    }
+
+    .hero__img {
+        img {
+            width: 51.91px;
+            margin: 0 auto;
+        }
+    }
+
+    p {
+        max-width: 223px;
+    }
+}
+
+.wishlist-section {
+    padding-bottom: 100px;
+
+    .colors {
+        display: flex;
+        justify-content: flex-end;
+        gap: 4px;
+
+        .color {
+            width: 24px;
+            height: 24px;
+            background-color: var(--color);
+        }
+    }
+
+    .sizes {
+        display: flex;
+        gap: 4px;
+
+        .size {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -1%;
+            text-align: center;
+            color: var(--Neutrals-neutral-400, #C9C5C1);
+            width: 24px;
+            height: 24px;
+            padding: 2px 0;
+
+            &.active {
+                color: var(--Neutrals-neutral-800, #796F64);
+            }
+        }
+    }
+
+    .catalog-grid-item.fade-out {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+}
+
+.no-items-section {
+    padding-top: 129px;
+    padding-bottom: 273px;
+    text-align: center;
+
+    h3 {
+        margin-bottom: 12px;
+        span {
+            color: var(--Accent-Accent-500, #FB654F);
+        }
+    }
+
+    p {
+        margin-bottom: 32px;
+    }
+
+    .btn {
+        margin: 0 auto;
+    }
+}
+
+.cta-section .cta-header {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 840px) {
+    .hero__section {
+        padding-top: 4px;
+        padding-bottom: 70px;
+
+        .hero__box {
+            gap: 16px;
+        }
+
+        .hero__img {
+            display: none;
+        }
+
+        .sub_title {
+            max-width: 400px;
+        }
+    }
+
+    .wishlist-section {
+        padding-bottom: 50px;
+
+        .container {
+            padding: 0;
+        }
+    }
+
+    .no-items-section {
+        padding-top: 123px;
+        padding-bottom: 173px;
+    }
+}
