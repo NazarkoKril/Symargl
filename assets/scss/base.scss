@@ -291,6 +291,42 @@ width: 100%;
 	letter-spacing: -0.14px;
 }
 
+.breadcrumbs {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	.breadcrumb {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 0%;
+		color: var(--Neutrals-neutral-600, #AEA8A2);
+		padding: 5px 0;
+		transition: var(--trans);
+
+		&:last-child {
+			color: var(--Neutrals-neutral-1000, #1A1715);
+		}
+
+		&:active {
+			color: var(--Neutrals-neutral-800, #796F64);
+		}
+
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
+		}
+	}
+
+	.badge {
+		width: 4px;
+		height: 4px;
+		border-radius: 99px;
+		background-color: var(--Neutrals-neutral-600, #AEA8A2);
+	}
+}
+
 // cursor
 @media (min-width: 500px) {
 	.cursor {
