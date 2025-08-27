@@ -1318,33 +1318,26 @@
     background-size: cover;
     background-position: left;
   }
+  .lookbook__info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+    top: auto;
+  }
   .lookbook__info .h3_title {
-    display: none;
+    max-width: 250px;
+  }
+  .lookbook__info .btn {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: 0px;
+    margin-top: 20px;
   }
   .lookbook__info .sub_title {
-    display: none;
-  }
-  .lookbook__fixed .mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 12px;
-  }
-  .lookbook__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 12px;
+    margin-left: 0px;
+    max-width: 300px;
   }
   .lookbook__photo1 {
     margin-left: 0px;

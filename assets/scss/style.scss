@@ -1181,26 +1181,26 @@
 		background-position: left;
 	}
 	.lookbook__info {
-		.h3_title {
-			display: none;
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom: 60px;
+		top: auto;
+		 .h3_title{
+			max-width: 250px;
 		}
-		.sub_title {
-			display: none;
+		.btn{
+			order: 1;
+			margin-left: 0px;
+			margin-top: 20px;
+		}
+		.sub_title{
+			margin-left: 0px;
+			max-width: 300px;
 		}
 	}
-	.lookbook__fixed {
-		.mob {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-		}
-	}
-	.lookbook__info {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 12px;
-	}
+
+	
 	.lookbook__photo1 {
 		margin-left: 0px;
 		margin-right: auto;
