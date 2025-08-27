@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/account.css">
+    <!-- fav-icon -->
+    <link rel="icon" href="" type="image/x-icon">
+    <title>WebSite</title>
+</head>
+
+<body>
+
+    <div class="header_component"></div>
+
+    <main class="account" id="account">
+        <div class="container">
+            <div class="account__grid">
+                <!-- SIDEBAR / MOBILE MENU -->
+                <aside class="account-nav">
+                    <div class="account-nav__user">
+                        <div class="account-nav__avatar">C</div>
+                        <div class="account-nav__name sub_title">Северин Коваль</div>
+                    </div>
+                    <nav class="account-nav__list">
+                        <button class="account-nav__link is-active to-personal">Персональні дані</button>
+                        <button class="account-nav__link to-access">Дані доступу</button>
+                        <button class="account-nav__link to-orders">Мої замовлення</button>
+                        <button class="account-nav__link to-wishlist">Вішліст</button>
+                    </nav>
+                    <button class="account-nav__logout">Вийти</button>
+                </aside>
+
+                <!-- CONTENT -->
+                <section class="account-content">
+                    <div class="account__mobilebar">
+                        <button class="account__back to-menu icon light_gray">
+                            <img src="/assets/img/icons/arrow_back.svg" alt="Назад">
+                        </button>
+                        <h1 class="h3_title account__title">Кабінет</h1>
+                    </div>
+
+                    <!-- PERSONAL -->
+                    <section class="account__section account__section--personal is-active">
+                        <h2 class="h2_title section-title">ПЕРСОНАЛЬНІ ДАНІ</h2>
+
+                        <div class="block">
+                            <h3 class="h5_title block__title">КОНТАКТНА ІНФОРМАЦІЯ</h3>
+                            <div class="form-grid">
+                                <div class="input-box"><label>Імʼя</label>
+                                    <div class="input"><input placeholder="Імʼя" /></div>
+                                </div>
+                                <div class="input-box"><label>Прізвище</label>
+                                    <div class="input"><input placeholder="Прізвище" /></div>
+                                </div>
+                                <div class="input-box"><label>Електронна пошта</label>
+                                    <div class="input"><input type="email" placeholder="Електронна пошта" /></div>
+                                </div>
+                                <div class="input-box"><label>Телефон</label>
+                                    <div class="input"><input placeholder="Телефон" /></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <h3 class="h5_title block__title">АДРЕСА</h3>
+                            <div class="form-grid">
+                                <div class="input-box"><label>Адреса</label>
+                                    <div class="input"><input placeholder="Адреса" /></div>
+                                </div>
+                                <div class="input-box"><label>Поштовий індекс</label>
+                                    <div class="input"><input placeholder="Поштовий індекс" /></div>
+                                </div>
+                                <div class="input-box"><label>Область/регіон</label>
+                                    <div class="input"><input placeholder="Область/регіон" /></div>
+                                </div>
+                                <div class="input-box"><label>Населений пункт</label>
+                                    <div class="input"><input placeholder="Населений пункт" /></div>
+                                </div>
+                                <div class="input-box"><label>Район</label>
+                                    <div class="input"><input placeholder="Район" /></div>
+                                </div>
+                                <div class="input-box"><label>Країна</label>
+                                    <div class="input"><input placeholder="Країна" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ACCESS -->
+                    <section class="account__section account__section--access">
+                        <h2 class="h2_title section-title">ДАНІ ДОСТУПУ</h2>
+
+                        <div class="block">
+                            <h3 class="h5_title block__title">ЗМІНИТИ ПАРОЛЬ</h3>
+                            <div class="form-grid form-grid--half">
+                                <div class="input-box"><label>Поточний пароль*</label>
+                                    <div class="input"><input type="password" placeholder="Поточний пароль" /><button
+                                            type="button" class="auth-toggle"><img src="/assets/img/icons/hide_eye.svg"
+                                                class="auth-icon" alt="Показати"></button></div>
+                                </div>
+                                <div class="input-box"><label>Повторіть пароль*</label>
+                                    <div class="input"><input type="password" placeholder="Повторіть пароль*" /><button
+                                            type="button" class="auth-toggle"><img src="/assets/img/icons/hide_eye.svg"
+                                                class="auth-icon" alt="Показати"></button></div>
+                                </div>
+                                <div class="input-box"><label>Новий пароль*</label>
+                                    <div class="input"><input type="password" placeholder="Новий пароль*" /><button
+                                            type="button" class="auth-toggle"><img src="/assets/img/icons/hide_eye.svg"
+                                                class="auth-icon" alt="Показати"></button></div>
+                                </div>
+                                <div class="input-box"><label>Повторіть пароль*</label>
+                                    <div class="input"><input type="password" placeholder="Повторіть пароль*" /><button
+                                            type="button" class="auth-toggle"><img src="/assets/img/icons/hide_eye.svg"
+                                                class="auth-icon" alt="Показати"></button></div>
+                                </div>
+                            </div>
+                            <button class="btn gray">Змінити пароль</button>
+                        </div>
+
+                        <div class="block">
+                            <h3 class="h5_title block__title">ЗМІНИТИ АДРЕСУ ЕЛ. ПОШТИ</h3>
+                            <div class="form-grid form-grid--half">
+                                <div class="input-box"><label>Поточна адреса ел. пошти*</label>
+                                    <div class="input"><input type="email" placeholder="Поточна адреса ел. пошти*" />
+                                    </div>
+                                </div>
+                                <div class="input-box"><label>Повторіть адресу ел. пошти*</label>
+                                    <div class="input"><input type="email" placeholder="Повторіть адресу ел. пошти*" />
+                                    </div>
+                                </div>
+                                <div class="input-box"><label>Нова адреса ел. пошти*</label>
+                                    <div class="input"><input type="email" placeholder="Нова адреса ел. пошти*" /></div>
+                                </div>
+                                <div class="input-box"><label>Повторіть адресу ел. пошти*</label>
+                                    <div class="input"><input type="email" placeholder="Повторіть адресу ел. пошти*" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn gray">Змінити адресу ел. пошти</button>
+                        </div>
+                    </section>
+
+                    <!-- ORDERS -->
+                    <section class="account__section account__section--orders">
+                        <h2 class="h2_title section-title">МОЇ ЗАМОВЛЕННЯ</h2>
+                        <div class="orders">
+                            <div class="orders__row">
+                                <img class="orders__img"
+                                    src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=300"
+                                    alt="" />
+                                <div class="orders__cell">Светр з круглою стійкою Coral</div>
+                                <div class="orders__cell">2шт</div>
+                                <div class="orders__cell orders__status">Відправлено</div>
+                                <div class="orders__cell">01.01.2026</div>
+                                <div class="orders__cell">2400 ₴</div>
+                            </div>
+                            <div class="orders__row">
+                                <img class="orders__img"
+                                    src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=300"
+                                    alt="" />
+                                <div class="orders__cell">Светр з круглою стійкою Coral</div>
+                                <div class="orders__cell">2шт</div>
+                                <div class="orders__cell orders__status is-problem">Поминка</div>
+                                <div class="orders__cell">01.01.2026</div>
+                                <div class="orders__cell">2400 ₴</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- WISHLIST -->
+                    <section class="account__section account__section--wishlist">
+                        <h2 class="h2_title section-title">ВІШЛІСТ</h2>
+                        <div class="wishlist">
+                            <article class="card__item wishlist__card">
+                                <img class="card__img"
+                                    src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600"
+                                    alt="" />
+                                <div class="subphoto">СВЕТР З КРУГЛОЮ СТІЙКОЮ CORAL</div>
+                            </article>
+                            <article class="card__item wishlist__card">
+                                <img class="card__img"
+                                    src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=600"
+                                    alt="" />
+                                <div class="subphoto">СВЕТР З КРУГЛОЮ СТІЙКОЮ CORAL</div>
+                            </article>
+                            <article class="card__item wishlist__card">
+                                <img class="card__img"
+                                    src="https://images.unsplash.com/photo-1516009082240-8890160a62c1?q=80&w=600"
+                                    alt="" />
+                                <div class="subphoto">СВЕТР З КРУГЛОЮ СТІЙКОЮ CORAL</div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+            <!-- Newsletter teaser -->
+            <section class="section__title">
+                <div class="container">
+                    <div class="big_title">
+                        <h2 class="h1_title">Будь у курсі першим<span class="orange">.</span></h2>
+                        <p class="sub_title">Надішлемо, коли буде щось справді варте.
+                        </p>
+                        <form action="" class="form_email">
+                            <div class="input-box">
+                                <label for="email">Електронна пошта</label>
+                                <div class="input ">
+                                    <input type="email" id="email" placeholder="Електронна пошта" />
+                                </div>
+                                <div class="input-text">повідомлення про помилку</div>
+                            </div>
+                            <button class="btn orange">Підписатись</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="footer_component"></div>
+
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script defer src="/assets/js/components/account.js"></script>
+
+</body>
+
+</html>
