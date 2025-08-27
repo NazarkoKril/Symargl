@@ -728,10 +728,13 @@ img {
 .blog-card.small .blog-card-info {
   margin-bottom: 16px;
 }
+.blog-card.small .blog-card-name {
+  padding-right: 40px;
+}
 
 @media (max-width: 840px) {
-  .blog-card .blog-card-name,
-  .blog-card .blog-card-info {
+  .blog-card.small .blog-card-name,
+  .blog-card.small .blog-card-info {
     padding: 0 20px;
   }
 }

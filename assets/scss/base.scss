@@ -692,11 +692,15 @@ width: 100%;
         .blog-card-info {
             margin-bottom: 16px;
         }
+
+		.blog-card-name {
+			padding-right: 40px;
+		}
     }
 }
 
 @media (max-width: 840px) {
-	.blog-card {
+	.blog-card.small {
 		.blog-card-name,
 		.blog-card-info {
 			padding: 0 20px;
