@@ -39,7 +39,7 @@ const headerComponent = `
                         </p>
                     </li>
                     <li>
-                        <a class="header__link desk" href="/page/office.html">Кабінет</a>
+                        <a class="header__link desk" href="/page/login.html">Кабінет</a>
                     </li>
                 </ul>
             </nav>
@@ -66,7 +66,7 @@ const headerComponent = `
                         <li><a href="/page/about.html">Про нас</a></li>
                         <li><a href="/page/wishlist.html">Вішліст</a></li>
                         <li><a href="/page/faq.html">FAQ</a></li>
-                        <li><a href="/page/office.html">Кабінет</a></li>
+                        <li><a href="/page/login.html">Кабінет</a></li>
                     </ul>
                 </div>
                  <div class="header__line"></div>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/page/login.css">
+    <!-- fav-icon -->
+    <link rel="icon" href="" type="image/x-icon">
+    <title>WebSite</title>
+</head>
+
+<body>
+
+    <div class="header_component"></div>
+
+    <main class="auth" id="auth">
+
+        <div class="auth__grid">
+            <div class="auth__side auth__side--left"></div>
+
+            <section class="auth__container">
+
+                <div class="auth__panel">
+
+                    <section class="auth__view auth__view--login is-active">
+                        <h1 class="h2_title auth__title">УВІЙДИ У СИСТЕМУ <br> АБО ЗАРЕЄСТРУЙСЯ
+                        </h1>
+                        <form class="auth-form">
+                            <div class="input-box">
+                                <label>Електронна пошта*</label>
+                                <div class="input">
+                                    <input type="email" placeholder="Електронна пошта" autocomplete="email" />
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label>Пароль*</label>
+                                <div class="input">
+                                    <input type="password" placeholder="Пароль" autocomplete="current-password" />
+                                    <button type="button" class="auth-toggle">
+                                        <img src="/assets/img/icons/hide_eye.svg" alt="Показати пароль"
+                                            class="auth-icon" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="button" class="auth__link to-reset">Забув пароль?</button>
+
+
+                            <button type="button" class="btn orange do-login">Увійти</button>
+                            <button type="button" class="btn light_gray to-signup">Зареєструватися</button>
+
+
+                            <div class="auth-social">
+                                <p class="h5_title">ВХІД/РЕЄСТРАЦІЯ ЗА ДОПОМОГОЮ СВОГО ОБЛІКОВОГО ЗАПИСУ В СОЦІАЛЬНІЙ
+                                    МЕРЕЖІ</p>
+                                <div class="auth-row">
+                                    <button type="button" class="btn light_gray do-oauth">Увійти через Facebook</button>
+                                    <button type="button" class="btn light_gray do-oauth">Увійти через Google</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+
+                    <section class="auth__view auth__view--signup">
+                        <h2 class="h2_title auth__title">СТВОРИТИ ОБЛІКОВИЙ ЗАПИС</h2>
+                        <form class="auth-form">
+                            <div class="input-box"><label>Імʼя*</label>
+                                <div class="input"><input placeholder="Імʼя" /></div>
+                            </div>
+                            <div class="input-box"><label>Прізвище*</label>
+                                <div class="input"><input placeholder="Прізвище" /></div>
+                            </div>
+                            <div class="input-box"><label>Електронна пошта*</label>
+                                <div class="input"><input type="email" placeholder="Електронна пошта"
+                                        autocomplete="email" /></div>
+                            </div>
+                            <div class="input-box"><label>Пароль*</label>
+                                <div class="input">
+                                    <input type="password" placeholder="Пароль" autocomplete="new-password"
+                                        minlength="6" />
+                                    <button type="button" class="auth-toggle">
+                                        <img src="/assets/img/icons/hide_eye.svg" alt="Показати пароль"
+                                            class="auth-icon" />
+                                    </button>
+                                </div>
+                            </div>
+                            <label class="auth-check">
+                                <input type="checkbox" />
+                                <small>Я хочу отримувати новини та
+                                    персоналізовані повідомлення комерційного характеру від Симаргл
+                                </small>
+                            </label>
+                            <div class="auth-row">
+                                <button type="button" class="btn orange do-signup">Прийняти та
+                                    продовжити
+                                </button>
+                            </div>
+                            <div class="auth-inline">
+                                <span class="sub_title" style="color: #AEA8A2;">Маєш акаунт?</span>
+                                <button type="button" class="auth__link to-login">Увійти</button>
+                            </div>
+                        </form>
+                    </section>
+
+
+                    <section class="auth__view auth__view--reset">
+                        <button type="button" class="auth-back to-login icon lite_gray">
+                            <img src="/assets/img/icons/arrow_back.svg" alt="arrow_back">
+                        </button>
+                        <h2 class="h2_title auth__title">ВІДНОВИТИ ПАРОЛЬ</h2>
+                        <p class="sub_title auth__desc">Укажіть вашу адресу електронної пошти, і ми надішлемо інструкції
+                            для отримання пароля.</p>
+                        <form class="auth-form">
+                            <div class="input-box"><label>Електронна пошта*</label>
+                                <div class="input"><input type="email" placeholder="Електронна пошта"
+                                        autocomplete="email" /></div>
+                            </div>
+                            <button type="button" class="btn orange to-sent">Надіслати</button>
+                        </form>
+                    </section>
+
+
+                    <section class="auth__view auth__view--sent">
+                        <button type="button" class="auth-back to-reset icon lite_gray"> <img
+                                src="/assets/img/icons/arrow_back.svg" alt="arrow_back"></button>
+                        <h2 class="h2_title auth__title">ПОВІДОМЛЕННЯ НАДІСЛАНЕ</h2>
+                        <p class="sub_title auth__desc">Ми надіслали вам електронне повідомлення. Якщо ви його не
+                            отримали, можливо, ви не зареєстровані на нашому сайті.</p>
+                        <button type="button" class="btn orange to-login">Увійти</button><button type="button"
+                            class="btn light_gray to-signup">Зареєструватися</button>
+                    </section>
+
+
+                    <section class="auth__view auth__view--change" >
+                        <button type="button" class="auth-back to-login icon lite_gray">
+                            <img
+                                src="/assets/img/icons/arrow_back.svg" alt="arrow_back">
+                        </button>
+                        <h2 class="h3_title auth__title">ЗМІНИТИ ПАРОЛЬ</h2>
+                        <form class="auth-form">
+                            <div class="input-box"><label>Пароль*</label>
+                                <div class="input"><input type="password" placeholder="Пароль" minlength="6"
+                                        autocomplete="new-password" /> <button type="button" class="auth-toggle">
+                                        <img src="/assets/img/icons/hide_eye.svg" alt="Показати пароль"
+                                            class="auth-icon" />
+                                    </button></div>
+                            </div>
+                            <button type="button" class="btn orange to-changed">Змінити пароль</button>
+                        </form>
+                    </section>
+
+
+                    <section class="auth__view auth__view--changed">
+                        <button type="button" class="auth-back to-login icon lite_gray">
+                            <img
+                                src="/assets/img/icons/arrow_back.svg" alt="arrow_back">
+                        </button>
+                        <h2 class="h2_title auth__title">ПАРОЛЬ ЗМІНЕНО</h2>
+                        <p class="sub_title auth__desc">Ваш пароль успішно змінено. Використовуйте його для наступного
+                            входу у ваш акаунт.</p>
+                        <button type="button" class="btn orange to-login">Увійти в акаунт</button>
+                    </section>
+                </div>
+            </section>
+
+            <div class="auth__side auth__side--right"></div>
+        </div>
+
+    </main>
+
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script defer src="/assets/js/components/login.js"></script>
+
+</body>
+
+</html>
