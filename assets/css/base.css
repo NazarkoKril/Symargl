@@ -34,6 +34,11 @@ body {
     padding: 0 20px;
   }
 }
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1920px;
+  }
+}
 main {
   padding-top: 56px;
 }
@@ -529,6 +534,10 @@ img {
   .icon.gray:active,
   .btn.gray:active {
     background: var(--Neutrals-neutral-900, #59514a);
+  }
+  .account-nav__link:focus-visible, .account-nav__logout:focus-visible {
+    outline: 1px solid #fb654f;
+    outline-offset: 2px;
   }
   .header__link:active {
     color: var(--Neutrals-neutral-800, #796f64);

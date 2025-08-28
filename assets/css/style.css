@@ -1238,6 +1238,7 @@
   left: 8px;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
   -webkit-transition: var(--trans);
   transition: var(--trans);
 }
@@ -1247,6 +1248,7 @@
   right: 8px;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
   -webkit-transition: var(--trans);
   transition: var(--trans);
 }

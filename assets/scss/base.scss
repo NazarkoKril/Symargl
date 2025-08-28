@@ -29,6 +29,13 @@ body {
 	}
 
 }
+@media (min-width:1441px) {
+	.container {
+	
+	max-width: 1920px;
+
+}
+}
 main {
 	padding-top: 56px;
 }
@@ -470,6 +477,12 @@ width: 100%;
 			&:active {
 				background: var(--Neutrals-neutral-900, #59514a);
 			}
+		}
+	}
+	.account-nav__link ,.account-nav__logout{
+		&:focus-visible {
+			outline: 1px solid #fb654f;
+			outline-offset: 2px;
 		}
 	}
 	.header__link {

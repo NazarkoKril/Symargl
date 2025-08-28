@@ -466,6 +466,7 @@
 		visibility: hidden;
 		z-index: 2;
 		transition: var(--trans);
+
 		&:focus {
 			outline: none;
 		}
@@ -1089,6 +1090,7 @@
             left: 8px;
             opacity: 0;
             visibility: hidden;
+			z-index: 2;
             transition: var(--trans);
         }
 
@@ -1098,6 +1100,7 @@
             right: 8px;
             opacity: 0;
             visibility: hidden;
+			z-index: 2;
             transition: var(--trans);
         }
 
