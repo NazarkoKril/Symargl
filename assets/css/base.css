@@ -248,6 +248,8 @@ img {
   color: var(--semantic-s-error, #fb654f);
   opacity: 1;
   visibility: visible;
+  max-height: 14px;
+  margin-top: 6px;
 }
 .input-box:has(.input.error) .input {
   border-bottom: 0.5px solid var(--semantic-s-error, #fb654f);
@@ -259,12 +261,12 @@ img {
   color: var(--Neutrals-neutral-200, #e3e1e0);
 }
 .input-box .input-text {
-  margin-top: 6px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   opacity: 0;
   visibility: hidden;
+  max-height: 0;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
 }

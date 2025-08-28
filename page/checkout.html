@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/page/checkout.css">
+    <!-- fav-icon -->
+    <link rel="icon" href="" type="image/x-icon">
+    <title>WebSite</title>
+</head>
+
+<body>
+
+    <div class="header_component"></div>
+
+    <main>
+        <section class="hero__section">
+            <div class="container">
+                <div class="hero__box">
+                    <h1 class="h1_title">Чекаут<span class="orange">.</span></h1>
+                    <div class="hero__img">
+                        <img src="/assets/img/icons/arrow_decor.svg" alt="decor">
+                    </div>
+                    <p class="sub_title">Тут зібрались речі, які вже на півкроку до тебе. Ще трохи — і вони в твоєму гардеробі.</p>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-section">
+            <div class="container">
+                <form class="checkout-grid">
+                    <div class="checkout-info">
+                        <fieldset>
+                            <legend class="h3_title">Ваші дані</legend>
+                            <div class="inputs">
+                                <div class="input-box">
+                                    <label for="name">Імʼя</label>
+                                    <div class="input">
+                                        <input type="text" name="name" id="name" placeholder="Імʼя">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                                <div class="input-box">
+                                    <label for="surname">Прізвище</label>
+                                    <div class="input">
+                                        <input type="text" name="surname" id="surname" placeholder="Прізвище">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="h3_title">Контактні дані</legend>
+                            <div class="inputs">
+                                <div class="input-box">
+                                    <label for="email">Електронна пошта</label>
+                                    <div class="input">
+                                        <input type="email" name="email" id="email" placeholder="Електронна пошта">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                                <div class="input-box">
+                                    <label for="tel">Телефон</label>
+                                    <div class="input">
+                                        <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="h3_title">Доставка <span>(Безкоштовна доставка для замовлень на суму понад 2,900 грн)</span></legend>
+                            <div class="inputs-delivery-company">
+                                <label for="np" class="delivery-company" tabindex="0">
+                                    <p class="delivery-company-name">Нова пошта</p>
+                                    <p class="delivery-company-info">Термін: 2-4 робочі дні</p>
+                                    <input type="radio" id="np" name="delivery-company" checked>
+                                </label>
+                                <label for="up" class="delivery-company" tabindex="0">
+                                    <p class="delivery-company-name">Укрпошта</p>
+                                    <p class="delivery-company-info">Термін: 5-7 робочі дні</p>
+                                    <input type="radio" id="up" name="delivery-company">
+                                </label>
+                            </div>
+                            <div class="inputs-delivery-option">
+                                <label for="post-station" class="checkbox-input" tabindex="0">
+                                    <input type="radio" id="post-station" name="delivery" checked>
+                                    <div class="checkmark"><div class="block"></div></div>
+                                    <div class="delivery-option">
+                                        <p>Відділення</p>
+                                        <p>Вартість: 150</p>
+                                    </div>
+                                </label>
+                                <label class="checkbox-input" tabindex="0">
+                                    <input for="parcel-locker" type="radio" id="parcel-locker" name="delivery">
+                                    <div class="checkmark"><div class="block"></div></div>
+                                    <div class="delivery-option">
+                                        <p>Поштомат</p>
+                                        <p>Вартість: 100</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="inputs">
+                                <div class="input-box">
+                                    <label for="locality">Оберіть населений пункт</label>
+                                    <div class="input">
+                                        <input type="text" name="locality" id="locality" placeholder="Оберіть населений пункт">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                                <div class="input-box">
+                                    <label for="post-office">Відділення нової пошти</label>
+                                    <div class="input">
+                                        <input type="text" name="post-office" id="post-office" placeholder="Телефон">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="checkout-totals">
+                        <div class="checkout-totals-box">
+                            <div class="checkout-totals-details">
+                                <h5 class="h5_title">Підсумок</h5>
+                                <div class="checkout-totals-block">
+                                    <p>2 товари</p>
+                                    <p>6000 ₴</p>
+                                </div>
+                                <div class="checkout-totals-block">
+                                    <p>Вартість доставки</p>
+                                    <p>150 ₴</p>
+                                </div>
+                                <div class="checkout-totals-block">
+                                    <p>Доставка</p>
+                                    <p>-150 ₴</p>
+                                    <p class="checkout-totals-text">Безкоштовна доставка на суму понад 2,900 грн</p>
+                                </div>
+                                <div class="input-box">
+                                    <label for="promocode">Промокод</label>
+                                    <div class="input">
+                                        <input type="text" id="promocode" placeholder="PROMOCODE111">
+                                    </div>
+                                    <div class="input-text">Допоміжний текст.</div>
+                                </div>
+                                <label for="news" class="checkbox-input" tabindex="0">
+                                    <input type="checkbox" id="news">
+                                    <div class="checkmark"><div class="block"></div></div>
+                                    <p>Я хочу отримувати новини та персоналізовані повідомлення комерційного характеру від Симаргл</p>
+                                </label>
+                            </div>
+                            <div class="checkout-totals-total">
+                                <p>Усього</p>
+                                <label for="checkout-details"> Усього
+                                    <input type="checkbox" id="checkout-details">
+                                    <div class="checkout-icon">
+                                        <img src="/assets/img/icons/keyboard_arrow_up.svg" alt="">
+                                    </div>
+                                </label>
+                                <p>6000 ₴</p>
+                            </div>
+                            <button type="submit" class="btn orange">Продовжити</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer_component"></div>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script src="/assets/js/script.js"></script>
+    
+</body>
+
+</html>

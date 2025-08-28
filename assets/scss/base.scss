@@ -199,6 +199,8 @@ width: 100%;
 			color: var(--semantic-s-error, #fb654f);
 			opacity: 1;
 			visibility: visible;
+			max-height: 14px;
+			margin-top: 6px;
 		}
 
 		.input {
@@ -217,12 +219,12 @@ width: 100%;
 	}
 
 	.input-text {
-		margin-top: 6px;
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
 		opacity: 0;
 		visibility: hidden;
+		max-height: 0;
 		transition: opacity .3s linear;
 		
 	}
