@@ -1131,6 +1131,31 @@
     }
 }
 
+.successful-main {
+	padding-top: 0;
+}
+
+.successful-section {
+	.successful-block {
+		height: 100svh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	h2, h5 {
+		margin-bottom: 20px;
+	}
+
+	.buttons {
+		margin-top: 40px;
+		display: flex;
+		gap: 8px;
+	}
+}
+
 @media (max-width:1250px) {
 		.hero__section_404{
 	.hero__box{
