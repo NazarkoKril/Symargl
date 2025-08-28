@@ -984,7 +984,7 @@
 .cta-section .cta-form .input-box {
   margin-bottom: 20px;
 }
-.cta-section button {
+.cta-section button, .cta-section a {
   margin: 0 auto;
 }
 
