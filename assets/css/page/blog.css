@@ -139,6 +139,9 @@
   .settings-section .right .input input::placeholder {
     color: var(--Brown-Light, #91897F);
   }
+  .blogs-section {
+    padding-bottom: 50px;
+  }
   .blogs-section .container {
     padding: 0;
   }
