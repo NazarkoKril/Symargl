@@ -33,7 +33,7 @@ const headerComponent = `
                         <a class="header__link desk" href="/page/wishlist.html">Вішліст</a>
                     </li>
                     <li>
-                        <a class="header__link mobile" href="/page/basket.html">Корзина</a>
+                        <a class="header__link mobile" href="/page/cart.html">Корзина</a>
                         <p class="header_number">
                             (<span id="basket__number">3</span>)
                         </p>
