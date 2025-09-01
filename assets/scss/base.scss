@@ -486,9 +486,29 @@ img {
 			outline-offset: 2px;
 		}
 	}
-	.header__link {
+	.lookbooks .lookbook,.blog-card, .cart-item-photo{
+		transition: all .3s linear;
+		&:hover{
+			opacity: 0.9 !important;
+		}
+		&:active{
+			opacity: 0.8 !important;
+		}
+	}
+	.faq-header{
+		transition: all .3s linear;
+		&:hover .h3_title{
+		color: #524B43;
+	} 
+	}
+	.header__link
+	,.filter-tab button
+	,.account-nav__link {
+		&:hover{
+			color: #796F64 !important;
+		}
 		&:active {
-			color: var(--Neutrals-neutral-800, #796f64);
+			color:  #524B43 !important;
 		}
 		&:focus-visible {
 			outline: 1px solid #fb654f;
@@ -819,4 +839,13 @@ img {
 			padding: 0 20px;
 		}
 	}
+}
+
+.like img.animate {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.like img.animate {
+  transform: scale(1);
 }

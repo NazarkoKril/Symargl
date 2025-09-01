@@ -85,7 +85,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--Neutrals-neutral-800, #796f64);
+  background: var(--Neutrals-neutral-800, #796F64);
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -93,7 +93,7 @@
   z-index: 1;
 }
 .header__list li.active .header__link {
-  color: var(--Neutrals-neutral-800, #796f64);
+  color: var(--Neutrals-neutral-800, #796F64);
 }
 .header__list.right {
   -webkit-box-pack: end;
@@ -2047,5 +2047,16 @@
   }
   .preloader__bar {
     width: min(300px, 78vw);
+  }
+  .hero__section .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .hero__section .h1_title, .hero__section .sub_title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero__section .btn {
+    margin-left: 20px;
   }
 }

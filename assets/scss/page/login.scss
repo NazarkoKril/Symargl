@@ -205,7 +205,7 @@ height: 100%;
 
 @media (max-width: 1200px) {
 	.auth__grid {
-		grid-template-columns: 243px minmax(360px, 560px) 243px;
+		grid-template-columns: 243px 1fr 243px;
 	}
 }
 @media (max-width: 980px) {
@@ -222,12 +222,12 @@ height: 100%;
   gap:12px;
   cursor:pointer;
   user-select:none;
-  padding:6px;                 /* щоб гарно виглядав outline */
+  padding:6px;                
   transition:outline-color .2s ease, box-shadow .2s ease;
 margin-bottom: 20px;
 }
 
-/* приховуємо нативний checkbox, але зберігаємо доступність */
+
 .auth-check input{
   position:absolute;
   opacity:0;
@@ -240,7 +240,7 @@ margin-bottom: 20px;
   pointer-events:none;
 }
 
-/* текст */
+
 .auth-check small{
 color: var(--Neutrals-neutral-800, #796F64);
 font-family: Mariupol;
@@ -253,7 +253,7 @@ line-height: 14px; /* 116.667% */
   display:inline-block;
 }
 
-/* коробочка (порожня) */
+
 .auth-check small::before{
   content:"";
   position:absolute;

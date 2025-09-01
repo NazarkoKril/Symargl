@@ -66,14 +66,14 @@
 			width: 4px;
 			height: 4px;
 			border-radius: 50%;
-			background: var(--Neutrals-neutral-800, #796f64);
+			background: var(--Neutrals-neutral-800, #796F64);
 			top: 50%;
 			transform: translateY(-50%);
 			left: 0px;
 			z-index: 1;
 		}
 		&.active .header__link {
-			color: var(--Neutrals-neutral-800, #796f64);
+			color: var(--Neutrals-neutral-800, #796F64);
 		}
 	}
 	&.right {
@@ -1906,4 +1906,18 @@
 	.preloader__bar {
 		width: min(300px, 78vw);
 	}
+	.hero__section {
+.container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.h1_title, .sub_title{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.btn{
+		margin-left: 20px;
+	}
+	}
+	
 }
