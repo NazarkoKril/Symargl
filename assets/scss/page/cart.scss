@@ -66,10 +66,6 @@
                 position: absolute;
                 top: 8px;
                 padding: 0 8px;
-
-                button {
-                    background-color: var(--Neutrals-neutral-200, #E3E1E0);
-                }
             }
 
             &-settings {
@@ -160,6 +156,7 @@
             margin-bottom: 24px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-weight: 400;
             font-size: 14px;
             line-height: 16px;
@@ -169,6 +166,7 @@
             label {
                 display: none;
                 gap: 4px;
+                padding: 7.3px 0;
 
                 .cart-icon {
                     width: 16px;
@@ -370,6 +368,10 @@
                 display: flex;
                 gap: 12px;
                 height: 130px;
+
+                &-name h5 {
+                    text-align: left;
+                }
 
                 &-photo {
                     height: 130px;

@@ -79,7 +79,7 @@
 }
 
 .content-section {
-    padding: 100px 0;
+    padding-bottom: 100px;
 
     .content-headers {
         position: sticky;
@@ -122,12 +122,16 @@
 
     >.container.first {
         margin-top: -124px;
+
+        .content-block {
+            padding-top: 100px;
+        }
     }
 
     .content-block {
         max-width: 930px;
         margin-left: 255px;
-        margin-bottom: 80px;
+        padding-top: 80px;
 
         .content-text, .content-quote, .content-buttons, h2, h4 {
             max-width: 458px;
@@ -279,9 +283,11 @@
                 letter-spacing: 0%;
                 text-transform: uppercase;
                 color: var(--Neutrals-neutral-800, #796F64);
+                margin-bottom: 40px;
 
-                .mark {
+                .marks {
                     color: var(--Accent-Accent-500, #FB654F);
+                    font-style: italic;
                 }
             }
         }

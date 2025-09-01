@@ -1,5 +1,6 @@
 .account {
 	padding-top: 0px;
+	overflow: hidden;
 }
 .container_account {
 	width: 100%;
@@ -28,6 +29,7 @@
 	flex-direction: column;
 }
 .account-nav__user {
+	padding-left: 8px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -98,6 +100,10 @@
 	}
 }
 .account-nav__logout {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
 	background: none;
 	border: none;
 	color: #fb654f;
@@ -177,7 +183,7 @@
 
 	/* m3 */
 	font-family: Mariupol;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 16px; /* 114.286% */
@@ -187,7 +193,7 @@
 	color: var(--Neutrals-neutral-1000, #1a1715);
 	text-align: right;
 	font-family: Mariupol;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 16px; /* 114.286% */
@@ -309,8 +315,8 @@
 }
 
 .auth-toggle img {
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 	transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .auth-toggle.active img {
@@ -344,7 +350,7 @@
 		button {
 			padding: 4px 22px 4px 0;
 			font-weight: 400;
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 16px;
 			letter-spacing: -1%;
 			color: var(--Neutrals-neutral-600, #aea8a2);
@@ -444,22 +450,24 @@
 		padding-top: 60px;
 		min-height: 100svh;
 	}
+	.account-nav__user {
+		padding-left: 0;
+	}
 	.account-nav__list {
-		margin-top: 20px;
+		margin: 20px -20px 24px;
 	}
 	.account-nav__logout {
 		padding-left: 0px;
 	}
 	.account-nav__link {
-		padding-left: 0px;
 		position: relative;
-		padding-right: 32px;
+		padding: 14px 54px 14px 20px;
 		color: var(--Neutrals-neutral-1000, #1a1715) !important;
 		&::after {
 			content: "";
 			position: absolute;
 			top: 50%;
-			right: 8px;
+			right: 20px;
 			transform: translateY(-50%);
 			width: 24px;
 			height: 24px;
@@ -527,20 +535,18 @@
   .orders__row > .orders__cell:nth-child(4){
     grid-column: 3 / 4;            
     grid-row: 2 / 3;
-    text-align: right;
   }
   
   .orders__row > .orders__cell:nth-child(5){
     grid-column: 2 / 3;            
     grid-row: 3 / 4;
-    color: var(--Neutrals-neutral-600, #AEA8A2);
   }
   
   .orders__row > .orders__cell:nth-child(6),
   .orders__row > .orders__cell.price{
     grid-column: 3 / 4;             
     grid-row: 3 / 4;
-    text-align: right;
+	text-align: left;
     color: var(--Neutrals-neutral-1000, #1A1715);
   }
 
@@ -552,5 +558,9 @@
   .orders__img{
 	width: 90px;
 	height: 130px;
+  }
+
+  .items-section {
+	margin: 0 -20px;
   }
 }

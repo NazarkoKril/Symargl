@@ -983,7 +983,6 @@
 		height: 100svh;
 		margin-bottom: 0px;
 		background: url(/assets/img/img404.png) no-repeat center/contain;
-		background-position-x: 60%;
 	}
 	.sub_title {
 		margin-left: auto;
@@ -1474,13 +1473,6 @@
 	}
 }
 
-@media (max-width: 1250px) {
-	.hero__section_404 {
-		.hero__box {
-			background-position-x: 0%;
-		}
-	}
-}
 @media (max-width: 840px) {
 	.home-main .hero__section {
 		padding-top: 60px;
@@ -1488,6 +1480,7 @@
 	.hero__box {
 		grid-template-columns: 1fr;
 		margin-bottom: 12px;
+		overflow: hidden;
 	}
 	.hero__section .sub_title {
 		margin-left: 0px;
@@ -1683,6 +1676,7 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				margin-left: 0px;
+				max-width: unset;
 			}
 		}
 		.btn {

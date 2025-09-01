@@ -29,6 +29,7 @@
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .filter-tabs {
@@ -126,6 +127,7 @@
         .container {
             flex-direction: column;
             gap: 16px;
+            align-items: flex-start;
         }
 
         .left {
@@ -138,19 +140,9 @@
         }
 
         .right {
+            width: 100%;
             .input-box {
                 width: 100%;
-            }
-
-            .input {
-                input {
-                    padding: 12px 20px;
-                    border: 1px solid var(--Brown-Light, #91897F);
-
-                    &::placeholder {
-                        color: var(--Brown-Light, #91897F);
-                    }
-                }
             }
         }
     }

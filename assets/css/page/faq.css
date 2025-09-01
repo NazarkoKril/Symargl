@@ -158,6 +158,9 @@
   }
 }
 @media (max-width: 570px) {
+  .faq-section {
+    padding-bottom: 50px;
+  }
   .faq-section .faq-photo {
     margin: 0 -20px;
     width: calc(100% + 40px);

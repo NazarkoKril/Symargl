@@ -223,7 +223,7 @@
 }
 
 .content-section {
-    padding: 100px 0;
+    padding-bottom: 100px;
 
     .content-headers {
         position: sticky;
@@ -266,12 +266,17 @@
 
     >.container.first {
         margin-top: -124px;
+
+        .content-block {
+            padding-top: 100px;
+        }
     }
 
     .content-block {
         max-width: 930px;
         margin-left: 255px;
-        margin-bottom: 80px;
+        padding-top: 80px;
+        
 
         .content-text, .content-quote, .content-buttons, h2, h4 {
             max-width: 458px;

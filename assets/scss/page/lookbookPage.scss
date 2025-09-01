@@ -38,6 +38,8 @@
         height: 100vh;
         pointer-events: none;
         z-index: 1;
+        opacity: 0;
+        transition: var(--trans);
 
         .line {
             display: none;
@@ -98,7 +100,7 @@
         }
 
         &-details {
-            max-width: 223px;
+            width: 223px;
 
             &-header {
                 margin-bottom: 8px;
@@ -218,6 +220,7 @@
         .lookbook__list_img {
             height: 1085px;
             padding-bottom: 100px;
+            margin: 0;
         }
     }
 
@@ -228,6 +231,12 @@
 
     .mob {
         display: none;
+    }
+
+    &:has(.lookbook__list_img li:hover) {
+        .lookbook-info {
+            opacity: 1;
+        }
     }
 }
 
@@ -274,7 +283,7 @@
 }
 
 .aside-container {
-    padding: 20px;
+    padding: 96px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,24 +291,38 @@
     max-height: 100vh;
     height: 100vh;
 
-    h5 {
-        text-align: center;
-        margin-bottom: 124px;
-    }
-
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-body:has(.size-table.open) {
-    overflow: hidden;
+.aside-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: var(--Neutrals-neutral-000, #FEFEFF);
+    position: fixed;
+    top: 0;
+    width: 50%;
+
+    .icon {
+        margin: 0;
+        padding: 8px;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    h5 {
+        text-align: center;
+        width: calc(100% - 75px);
+    }
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+body:has(.size-table.open) {
+    overflow: hidden;
 }
 
 .cta-section .cta-header {
@@ -431,16 +454,7 @@ body:has(.size-table.open) {
         margin-left: auto;
     }
 
-    .aside-container {
-        padding-top: 28px;
-    }
-
-    .close-btn {
-        margin: 0;
-        padding: 8px;
-        img {
-            width: 20px;
-            height: 20px;
-        }
+    .aside-header {
+        width: 100%;
     }
 }

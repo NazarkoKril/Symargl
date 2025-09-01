@@ -44,6 +44,9 @@
   height: 100vh;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
 }
 .lookbook-content-section .lookbook-info .line {
   display: none;
@@ -110,7 +113,7 @@
   margin-left: -5px;
 }
 .lookbook-content-section .lookbook-info-details {
-  max-width: 223px;
+  width: 223px;
 }
 .lookbook-content-section .lookbook-info-details-header {
   margin-bottom: 8px;
@@ -220,6 +223,7 @@
 .lookbook-content-section .container:last-child .lookbook__list_img {
   height: 1085px;
   padding-bottom: 100px;
+  margin: 0;
 }
 .lookbook-content-section .section__video {
   margin-top: 100px;
@@ -227,6 +231,9 @@
 }
 .lookbook-content-section .mob {
   display: none;
+}
+.lookbook-content-section:has(.lookbook__list_img li:hover) .lookbook-info {
+  opacity: 1;
 }
 
 .lookbook__photo9 {
@@ -272,7 +279,7 @@
 }
 
 .aside-container {
-  padding: 20px;
+  padding: 96px 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,22 +294,41 @@
   max-height: 100vh;
   height: 100vh;
 }
-.aside-container h5 {
-  text-align: center;
-  margin-bottom: 124px;
-}
 .aside-container::-webkit-scrollbar {
   display: none;
 }
 
-body:has(.size-table.open) {
-  overflow: hidden;
+.aside-header {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: var(--Neutrals-neutral-000, #FEFEFF);
+  position: fixed;
+  top: 0;
+  width: 50%;
+}
+.aside-header .icon {
+  margin: 0;
+  padding: 8px;
+}
+.aside-header .icon img {
+  width: 20px;
+  height: 20px;
+}
+.aside-header h5 {
+  text-align: center;
+  width: calc(100% - 75px);
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+body:has(.size-table.open) {
+  overflow: hidden;
 }
 
 .cta-section .cta-header {
@@ -417,15 +443,7 @@ body:has(.size-table.open) {
   .lookbook__photo14 {
     margin-left: auto;
   }
-  .aside-container {
-    padding-top: 28px;
-  }
-  .close-btn {
-    margin: 0;
-    padding: 8px;
-  }
-  .close-btn img {
-    width: 20px;
-    height: 20px;
+  .aside-header {
+    width: 100%;
   }
 }

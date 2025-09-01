@@ -10,8 +10,15 @@
     }
 }
 .hero__section{
+    height: 100svh;
+    overflow: hidden;
     .hero__box{
         margin-bottom: 0px;
+    }
+
+    .hero__img {
+        height: calc(100svh - 20px);
+        overflow: hidden;
     }
 }
 .section__sweater{
@@ -27,6 +34,12 @@
     }
     .hero__section{
         padding-bottom: 0px;
+        height: unset;
+
+        .hero__img {
+            height: unset;
+            max-height: calc(100svh - 228px);
+        }
     }
     .section__sweater{
         padding-block: 50px;
