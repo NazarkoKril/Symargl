@@ -423,9 +423,11 @@
                 letter-spacing: 0%;
                 text-transform: uppercase;
                 color: var(--Neutrals-neutral-800, #796F64);
+                margin-bottom: 40px;
 
-                .mark {
+                .marks {
                     color: var(--Accent-Accent-500, #FB654F);
+                    font-style: italic;
                 }
             }
 
@@ -481,8 +483,21 @@
 }
 
 .lookbook__section {
+    padding-block: 100px;
+
     .lookbook__fixed {
         height: 523px;
+    }
+
+    .lookbook__info {
+        position: absolute;
+        inset: 0;
+        padding: 20px;
+    }
+
+    .lookbook__list_img {
+        padding: 0;
+        margin: 0;
     }
 
     .lookbook__photo4 {
@@ -496,7 +511,7 @@
 }
 
 .aside-container {
-    padding: 20px;
+    padding: 96px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -504,25 +519,39 @@
     max-height: 100vh;
     height: 100vh;
 
-    h5 {
-        text-align: center;
-        margin-bottom: 124px;
-    }
-
     &::-webkit-scrollbar {
         display: none;
+    }
+}
+
+.aside-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: var(--Neutrals-neutral-000, #FEFEFF);
+    position: fixed;
+    top: 0;
+    width: 50%;
+
+    .icon {
+        margin: 0;
+        padding: 8px;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    h5 {
+        text-align: center;
+        width: calc(100% - 75px);
     }
 }
 
 body:has(.size-table.open),
 body:has(.preview.open) {
     overflow: hidden;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 
 .preview {
@@ -627,6 +656,7 @@ body:has(.preview.open) {
     }
 
     .close-btn {
+        position: absolute;
         top: 20px;
         right: 20px;
         z-index: 2;
@@ -743,6 +773,10 @@ body:has(.preview.open) {
                     }
                 }
             }
+
+            &-details {
+                max-width: unset;
+            }
         }
 
         .item-photo {
@@ -750,7 +784,7 @@ body:has(.preview.open) {
             position: sticky;
             top: 0;
             overflow-y: scroll;
-            height: calc(100vh - 62px);
+            height: calc(100vh - 132px);
             margin-top: -56px;
             padding-top: 56px;
             width: 100%;
@@ -793,17 +827,8 @@ body:has(.preview.open) {
         }
     }
 
-    .aside-container {
-        padding-top: 28px;
-    }
-
-    .close-btn {
-        margin: 0;
-        padding: 8px;
-        img {
-            width: 20px;
-            height: 20px;
-        }
+    .aside-header {
+        width: 100%;
     }
 
     .preview {

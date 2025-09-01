@@ -4,6 +4,7 @@
 
     .hero__box {
         margin-bottom: 0;
+        align-items: flex-start;
     }
 
     .hero__img {
@@ -24,6 +25,7 @@
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .filter-tabs {
@@ -32,6 +34,7 @@
 
         .filter-tab {
             position: relative;
+            display: flex;
 
             &.active {
                 button {
@@ -40,7 +43,7 @@
             }
 
             button {
-                padding: 4px 22px 4px 0;
+                padding: 4px 4px 4px 0;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 16px;
@@ -66,9 +69,7 @@
             }
 
             &-number {
-                position: absolute;
-                top: 4px;
-                right: 0;
+                margin-top: 4px;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 14px;
@@ -191,6 +192,7 @@
     padding-bottom: 100px;
 
     .catalog-one {
+        position: relative;
         display: none;
         &-item {
             display: block;
@@ -221,7 +223,7 @@
                 align-items: center;
                 visibility: hidden;
                 opacity: 0;
-                transition: visibility 0.3s ease-out , opacity 0.3s ease-out;
+                transition: visibility 0.7s ease-out , opacity 0.7s ease-out;
             }
 
             &-name {
@@ -316,7 +318,7 @@
                 width: 100%;
                 visibility: hidden;
                 opacity: 0;
-                transition: visibility 0.3s ease-out , opacity 0.3s ease-out;
+                transition: visibility 0.7s ease-out , opacity 0.7s ease-out;
             }
 
             &:hover {
@@ -331,6 +333,10 @@
                 outline: 1px solid #fb654f;
 		        outline-offset: 2px;
             }
+
+            &:nth-of-type(3) {
+                margin-top: -56px;
+            }
         }
 
         &-decor {
@@ -344,6 +350,23 @@
 
         .mobile {
             display: none;
+        }
+
+        .to-top {
+            position: sticky;
+            top: calc(100% - 56px);
+            left: 100%;
+            width: 36px;
+            padding: 8px;
+            margin: 0;
+            z-index: 3;
+            margin-bottom: 20px;
+
+            img {
+                transform: rotate(90deg);
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
@@ -410,16 +433,15 @@
 }
 
 .filters {
-    max-width: 720px;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     max-height: 100vh;
     background-color: var(--Neutrals-neutral-000, #FEFEFF);
     position: fixed;
     top: 0;
-    right: -720px;
+    right: -50%;
     z-index: 999;
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
 
     &.open {
         right: 0;
@@ -428,6 +450,10 @@
 
     &-box {
         width: 300px;
+    }
+
+    > .aside-container {
+        padding-top: 160px;
     }
 
     .filter {
@@ -457,6 +483,7 @@
 
                 path {
                     fill: var(--Neutrals-neutral-800, #796F64);
+                    transition: var(--trans);
                 }
 
                 img {
@@ -464,9 +491,23 @@
                 }
             }
 
-            &:active {
+            &:hover {
                 h6 {
                     color: var(--Neutrals-neutral-800, #796F64);
+                }
+
+                .filter-icon path {
+                    fill: var(--Neutrals-neutral-600, #AEA8A2);
+                }
+            }
+
+            &:active {
+                h6 {
+                    color: var(--Neutrals-neutral-600, #AEA8A2);
+                }
+
+                .filter-icon path {
+                    fill: var(--Neutrals-neutral-400, #C9C5C1);
                 }
             }
 
@@ -641,23 +682,18 @@
 }
 
 .materials {
-    max-width: 720px;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     max-height: 100vh;
     background-color: var(--Neutrals-neutral-000, #FEFEFF);
     position: fixed;
     top: 0;
-    right: -720px;
+    right: -50%;
     z-index: 999;
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
 
     &.open {
         right: 0;
-    }
-
-    .aside-container h5 {
-        margin-bottom: 60px;
     }
 
     &-item {
@@ -692,11 +728,15 @@
             letter-spacing: -1%;
             color: var(--Neutrals-neutral-800, #796F64);
         }
+
+        &-photo {
+            overflow: hidden;
+        }
     }
 }
 
 .aside-container {
-    padding: 20px;
+    padding: 96px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -704,13 +744,33 @@
     max-height: 100vh;
     height: 100vh;
 
-    h5 {
-        text-align: center;
-        margin-bottom: 124px;
-    }
-
     &::-webkit-scrollbar {
         display: none;
+    }
+}
+
+.aside-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: var(--Neutrals-neutral-000, #FEFEFF);
+    position: fixed;
+    top: 0;
+    width: 50%;
+
+    .icon {
+        margin: 0;
+        padding: 8px;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    h5 {
+        text-align: center;
+        width: calc(100% - 75px);
     }
 }
 
@@ -802,22 +862,16 @@
             color: var(--Neutrals-neutral-400, #C9C5C1);
         }
     }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 body:has(.filters.open), body:has(.menu.open) {
     overflow: hidden;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
 }
 
 @media (max-width: 840px) {
@@ -845,7 +899,8 @@ body:has(.filters.open), body:has(.menu.open) {
         }
 
         .left {
-            max-width: 100%;
+            width: calc(100% + 40px);
+            padding-left: 20px;
             overflow-x: scroll;
 
             &::-webkit-scrollbar  {
@@ -856,6 +911,7 @@ body:has(.filters.open), body:has(.menu.open) {
         .right {
             flex-direction: row-reverse;
             justify-content: space-between;
+            width: 100%;
         }
     }
 
@@ -976,6 +1032,7 @@ body:has(.filters.open), body:has(.menu.open) {
     .filters {
         margin: 0;
         right: -100%;
+        width: 100%;
 
         &-box {
             width: 100%;
@@ -985,10 +1042,7 @@ body:has(.filters.open), body:has(.menu.open) {
 
     .materials {
         right: -100%;
-
-        .aside-container h5 {
-            margin-bottom: 51px;
-        }
+        width: 100%;
 
         &-item {
             grid-template-columns: 1fr;
@@ -1019,26 +1073,7 @@ body:has(.filters.open), body:has(.menu.open) {
         }
     }
 
-    .aside-container {
-        padding-top: 28px;
-    }
-
-    .close-btn {
-        margin: 0;
-        padding: 8px;
-        img {
-            width: 20px;
-            height: 20px;
-        }
-    }
-
-    .back-btn {
-        margin: 0;
-        padding: 8px;
-
-        img {
-            width: 20px;
-            height: 20px;
-        }
+    .aside-header {
+        width: 100%;
     }
 }

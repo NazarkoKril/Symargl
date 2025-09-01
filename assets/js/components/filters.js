@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isOpen) {
         item.classList.remove('open');
       } else {
-        item.classList.add('open');
+        filterItems.forEach(otherItem => {
+          otherItem.classList.remove('open');
+        });
+        setTimeout(() => {
+          item.classList.add('open');
+        }, 10); 
       }
     });
   });

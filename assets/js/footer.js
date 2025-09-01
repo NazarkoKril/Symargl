@@ -89,10 +89,10 @@ const footerComponent = `<footer class="footer">
             </div>
             <div class="footer__bottom">
                 <p>©2025 Symarhl</p>
-                <img src="/assets/img/icons/footer_decor.svg" alt="decoration footer">
+                <img class="footer__bottom_img-desktop" src="/assets/img/icons/footer_decor.svg" alt="decoration footer">
+                <img class="footer__bottom_img-mob" src="/assets/img/icons/footer_decor_mob.svg" alt="decoration footer">
                 <p>All rights reserved.</p>
             </div>
-            <img class="footer__bottom_img-mob" src="/assets/img/icons/footer_decor_mob.svg" alt="decoration footer">
         </div>
     </footer>    `
 footer.forEach( (el) => {

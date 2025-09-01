@@ -487,6 +487,9 @@
                     <div class="catalog-one-decor">
                         <img src="/assets/img/icons/arrow_decor.svg" alt="decor">
                     </div>
+                    <a href="#" class="icon light_gray to-top">
+                        <img src="/assets/img/icons/arrow_back.svg" alt="">
+                    </a>
                     <a href="/page/lookbook.html" class="catalog-one-item">
                         <div class="catalog-one-item-photo">
                             <img src="/assets/img/product1.png" alt="photo">
@@ -682,11 +685,16 @@
             </button>
         </aside>
         <aside class="filters">
-            <div class="aside-container">
+            <div class="aside-header">
                 <h5 class="h5_title">фільтри</h5>
+                <button class="icon white close-btn">
+                    <img src="/assets/img/icons/close.svg" alt="">
+                </button>
+                </div>
+            <div class="aside-container">
                 <div class="filters-box">
                     <section class="filter">
-                        <div class="filter-header" tabindex="0">
+                        <div class="filter-header cursor-hover" tabindex="0">
                             <div class="filter-name">
                                 <h6>Сортування</h6>
                             </div>
@@ -731,7 +739,7 @@
                         </div>
                     </section>
                     <section class="filter">
-                        <div class="filter-header" tabindex="0">
+                        <div class="filter-header cursor-hover" tabindex="0">
                             <div class="filter-name">
                                 <h6>Матеріал</h6>
                                 <button data-target="materials">Як обрати матеріал?</button>
@@ -773,7 +781,7 @@
                         </div>
                     </section>
                     <section class="filter">
-                        <div class="filter-header" tabindex="0">
+                        <div class="filter-header cursor-hover" tabindex="0">
                             <div class="filter-name">
                                 <h6>Колір</h6>
                             </div>
@@ -826,7 +834,7 @@
                         </div>
                     </section>
                     <section class="filter">
-                        <div class="filter-header" tabindex="0">
+                        <div class="filter-header cursor-hover" tabindex="0">
                             <div class="filter-name">
                                 <h6>Розмір</h6>
                                 <p class="filter-number">(<span id="size__number">1</span>)</p>
@@ -877,7 +885,7 @@
                         </div>
                     </section>
                     <section class="filter">
-                        <div class="filter-header" tabindex="0">
+                        <div class="filter-header cursor-hover" tabindex="0">
                             <div class="filter-name">
                                 <h6>Лукбук</h6>
                                 <p class="filter-number">(<span id="lookbook__number">1</span>)</p>
@@ -936,8 +944,16 @@
                 <img src="/assets/img/icons/close.svg" alt="">
             </button>
             <aside class="materials help-aside" data-aside="materials">
-                <div class="aside-container">
+                <div class="aside-header">
+                    <button class="icon white back-btn">
+                        <img src="/assets/img/icons/arrow_back.svg" alt="">
+                    </button>
                     <h5 class="h5_title">Як обрати матеріал?</h5>
+                    <button class="icon white close-btn">
+                        <img src="/assets/img/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="aside-container">
                     <section class="materials-item">
                         <div class="materials-item-header">
                             <h6>Merino</h6>
@@ -975,16 +991,18 @@
                         </div>
                     </section>
                 </div>
-                <button class="icon white back-btn">
-                    <img src="/assets/img/icons/arrow_back.svg" alt="">
-                </button>
-                <button class="icon white close-btn">
-                    <img src="/assets/img/icons/close.svg" alt="">
-                </button>
             </aside>
             <aside class="size-table help-aside" data-aside="size-table">
-                <div class="aside-container">
+                <div class="aside-header">
+                    <button class="icon white back-btn">
+                        <img src="/assets/img/icons/arrow_back.svg" alt="">
+                    </button>
                     <h5 class="h5_title">Таблиця розмірів</h5>
+                    <button class="icon white close-btn">
+                        <img src="/assets/img/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="aside-container">
                     <div class="size-table-text">
                         <div class="left">
                             <p>Модель має розмір L і зріст 185 cm.</p>
@@ -994,11 +1012,11 @@
                         </div>
                     </div>
                     <div class="size-table-tabs">
-                        <div class="tab" tabindex="0">
+                        <div class="tab cursor-hover" tabindex="0">
                             <input type="radio" name="size-table-tab" id="dimensional-grid-tab" checked>
                             <label for="dimensional-grid-tab">Розмірна сітка</label>
                         </div>
-                        <div class="tab" tabindex="0">
+                        <div class="tab cursor-hover" tabindex="0">
                             <input type="radio" name="size-table-tab" id="measurements-tab">
                             <label for="measurements-tab">Заміри виробу</label>
                         </div>
@@ -1008,11 +1026,11 @@
                             <div class="left">
                                 <p>Виберіть розмір</p>
                                 <ul>
-                                    <li><input type="radio" name="sizes" id="table-s" checked><label tabindex="0" for="table-s">S</label></li>
-                                    <li><input type="radio" name="sizes" id="table-m"><label tabindex="0" for="table-m">M</label></li>
-                                    <li><input type="radio" name="sizes" id="table-l"><label tabindex="0" for="table-l">L</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xl"><label tabindex="0" for="table-xl">XL</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xxl"><label tabindex="0" for="table-xxl">XXL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-s" data-col="1" checked><label tabindex="0" for="table-s">S</label></li>
+                                    <li><input type="radio" name="sizes" id="table-m" data-col="2"><label tabindex="0" for="table-m">M</label></li>
+                                    <li><input type="radio" name="sizes" id="table-l" data-col="3"><label tabindex="0" for="table-l">L</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xl" data-col="4"><label tabindex="0" for="table-xl">XL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xxl" data-col="5"><label tabindex="0" for="table-xxl">XXL</label></li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -1150,6 +1168,7 @@
     <script src="/assets/js/components/help-aside.js"></script>
     <script src="/assets/js/components/catalog-toggle.js"></script>
     <script src="/assets/js/components/toast.js"></script>
+    <script src="/assets/js/components/size-table.js"></script>
     
 </body>
 

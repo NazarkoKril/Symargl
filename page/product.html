@@ -58,24 +58,25 @@
                                 <button data-target="size-table">Тблиця розмірів</button>
                             </div>
                             <div class="sizes">
-                                <label class="size" for="size-s" tabindex="0">S
+                                <label class="size cursor-hover" for="size-s" tabindex="0">S
                                     <input type="radio" id="size-s" name="size">
                                 </label>
-                                <label class="size" for="size-m" tabindex="0">M
+                                <label class="size cursor-hover" for="size-m" tabindex="0">M
                                     <input type="radio" id="size-m" name="size" disabled>
+                                    <div class="tooltip">Немає в наявності</div>
                                 </label>
-                                <label class="size" for="size-l" tabindex="0">L
+                                <label class="size cursor-hover" for="size-l" tabindex="0">L
                                     <input type="radio" id="size-l" name="size">
                                 </label>
-                                <label class="size" for="size-xl" tabindex="0">XL
+                                <label class="size cursor-hover" for="size-xl" tabindex="0">XL
                                     <input type="radio" id="size-xl" name="size" disabled>
                                     <div class="tooltip">Немає в наявності</div>
                                 </label>
-                                <label class="size" for="size-xxl" tabindex="0">XXL
+                                <label class="size cursor-hover" for="size-xxl" tabindex="0">XXL
                                     <input type="radio" id="size-xxl" name="size">
                                 </label>
                             </div>
-                            <p class="item-info-details-size-text">Модель має розмір L і зріст 185 см. Не впевнені — беріть на розмір більше.</p>
+                            <p class="item-info-details-size-text">Модель має розмір L і зріст 185 см. <br>Не впевнені — беріть на розмір більше.</p>
                             <p class="item-info-details-header">Опис</p>
                             <p class="item-info-details-text">Бавовняний світшот прямого крою з м’якого трикотажу. Нічого кричущого — лише впевненість, яка працює в будь-якому поєднанні. З джинсами, під жакет, з шортами — твій вибір.</p>
                             <p class="item-info-details-header">Характеристики</p>
@@ -554,8 +555,13 @@
             </div>
         </section>
         <aside class="size-table help-aside" data-aside="size-table">
-                <div class="aside-container">
+                <div class="aside-header">
                     <h5 class="h5_title">Таблиця розмірів</h5>
+                    <button class="icon white close-btn">
+                        <img src="/assets/img/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="aside-container">
                     <div class="size-table-text">
                         <div class="left">
                             <p>Модель має розмір L і зріст 185 cm.</p>
@@ -565,11 +571,11 @@
                         </div>
                     </div>
                     <div class="size-table-tabs">
-                        <div class="tab" tabindex="0">
+                        <div class="tab cursor-hover" tabindex="0">
                             <input type="radio" name="size-table-tab" id="dimensional-grid-tab" checked>
                             <label for="dimensional-grid-tab">Розмірна сітка</label>
                         </div>
-                        <div class="tab" tabindex="0">
+                        <div class="tab cursor-hover" tabindex="0">
                             <input type="radio" name="size-table-tab" id="measurements-tab">
                             <label for="measurements-tab">Заміри виробу</label>
                         </div>
@@ -579,11 +585,11 @@
                             <div class="left">
                                 <p>Виберіть розмір</p>
                                 <ul>
-                                    <li><input type="radio" name="sizes" id="table-s" checked><label tabindex="0" for="table-s">S</label></li>
-                                    <li><input type="radio" name="sizes" id="table-m"><label tabindex="0" for="table-m">M</label></li>
-                                    <li><input type="radio" name="sizes" id="table-l"><label tabindex="0" for="table-l">L</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xl"><label tabindex="0" for="table-xl">XL</label></li>
-                                    <li><input type="radio" name="sizes" id="table-xxl"><label tabindex="0" for="table-xxl">XXL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-s" data-col="1" checked><label tabindex="0" for="table-s">S</label></li>
+                                    <li><input type="radio" name="sizes" id="table-m" data-col="2"><label tabindex="0" for="table-m">M</label></li>
+                                    <li><input type="radio" name="sizes" id="table-l" data-col="3"><label tabindex="0" for="table-l">L</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xl" data-col="4"><label tabindex="0" for="table-xl">XL</label></li>
+                                    <li><input type="radio" name="sizes" id="table-xxl" data-col="5"><label tabindex="0" for="table-xxl">XXL</label></li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -682,13 +688,20 @@
                                 <div class="left">
                                     <p>Щоб вимірити обхват грудей виробу, покладіть його на рівну поверхню. Замірте ширину та помножте її на два.</p>
                                 </div>
+
+                              
+
                                 <div class="right">
+
                                     <p>Усі товари різні, адже вказані заміри можуть бути не на 100 % точними.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
+                <button class="icon white back-btn">
+                    <img src="/assets/img/icons/arrow_back.svg" alt="">
+                </button>
                 <button class="icon white close-btn">
                     <img src="/assets/img/icons/close.svg" alt="">
                 </button>
@@ -738,6 +751,7 @@
     <script defer src="/assets/js/components/swiper-carousel.js"></script>
     <script src="/assets/js/components/preview-swiper.js"></script>
     <script src="/assets/js/components/toast.js"></script>
+    <script src="/assets/js/components/size-table.js"></script>
     
 </body>
 

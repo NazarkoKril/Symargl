@@ -835,6 +835,10 @@ img {
 }
 
 @media (max-width: 840px) {
+  .card__item .icon {
+    top: 0;
+    right: 0;
+  }
   .blog-card.small .blog-card-name,
   .blog-card.small .blog-card-info {
     padding: 0 20px;

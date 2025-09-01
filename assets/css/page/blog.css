@@ -4,6 +4,9 @@
 }
 .hero__section .hero__box {
   margin-bottom: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .hero__section .hero__img img {
   width: 51.91px;
