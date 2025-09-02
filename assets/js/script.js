@@ -62,13 +62,13 @@ function animate() {
 animate();
 
 document.addEventListener("mouseover", (e) => {
-	if (e.target.closest("a, button, .cursor-hover")) {
+	if (e.target.closest("a, button, input, .cursor-hover")) {
 		border.classList.add("hover");
 	}
 });
 
 document.addEventListener("mouseout", (e) => {
-	if (e.target.closest("a, button, .cursor-hover")) {
+	if (e.target.closest("a, button, input, .cursor-hover")) {
 		border.classList.remove("hover");
 	}
 });

@@ -41,6 +41,9 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .section__small_title .text .sub_title {
+    max-width: unset;
+  }
   .hero__section {
     padding-bottom: 0px;
     height: unset;

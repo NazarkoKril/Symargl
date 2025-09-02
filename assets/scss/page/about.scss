@@ -31,6 +31,10 @@
 @media (max-width:840px) {
     .section__small_title .text{
         flex-direction: column;
+
+        .sub_title {
+            max-width: unset;
+        }
     }
     .hero__section{
         padding-bottom: 0px;

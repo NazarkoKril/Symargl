@@ -20,6 +20,11 @@
 	gap: 10px;
 	align-items: start;
 	padding-top: 100px;
+
+	&:has(.account__section--personal.is-active),
+	&:has(.account__section--access.is-active) {
+		grid-template-columns: 470px 1fr 470px;
+	}
 }
 
 /* Sidebar */
@@ -128,6 +133,8 @@
 .account__section--access {
 	width: 100%;
 	max-width: 500px;
+	margin: 0 auto;
+	padding-left: 12px;
 }
 .section-title {
 	margin-bottom: 60px;
@@ -388,6 +395,11 @@
 @media (max-width: 1300px) {
 	.account__grid {
 		grid-template-columns: 200px 1fr;
+
+		&:has(.account__section--personal.is-active),
+		&:has(.account__section--access.is-active) {
+			grid-template-columns: 200px 1fr 200px;
+		}
 	}
 }
 @media (max-width: 980px) {
@@ -401,11 +413,17 @@
 
 @media (max-width: 980px) {
 	.account__grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr !important;
 		gap: 20px;
 	}
 	.account__mobilebar {
 		display: flex;
+	}
+
+	.account__section--personal,
+	.account__section--access {
+		margin: 0;
+		padding: 0;
 	}
 
 	.account.is-menu .account-nav {
@@ -474,6 +492,16 @@
 			background: no-repeat center / contain
 				url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><mask id='m' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'><rect width='24' height='24' fill='%23D9D9D9'/></mask><g mask='url(%23m)'><path d='M12.9462 12L8.34619 7.4L9.39994 6.34625L15.0537 12L9.39994 17.6538L8.34619 16.6L12.9462 12Z' fill='%23796F64'/></g></svg>");
 			pointer-events: none;
+			transition: all 0.3s linear;
+		}
+
+		&:active {
+			color: var(--Neutrals-neutral-800, #796F64) !important;
+
+			&::after {
+				background: no-repeat center / contain
+				url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><mask id='m' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'><rect width='24' height='24' fill='%23D9D9D9'/></mask><g mask='url(%23m)'><path d='M12.9462 12L8.34619 7.4L9.39994 6.34625L15.0537 12L9.39994 17.6538L8.34619 16.6L12.9462 12Z' fill='%23AEA8A2'/></g></svg>");
+			}
 		}
 	}
 	.account-nav__link.is-active.account-nav__link::before {

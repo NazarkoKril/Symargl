@@ -393,8 +393,11 @@
 }
 
 .auth-check input:checked + small::before {
-  background: var(--Neutrals-neutral-100, #f1f0ef);
   border-color: var(--Neutrals-neutral-600, #AEA8A2);
+}
+
+.auth-check input:hover + small::before {
+  background: var(--Neutrals-neutral-100, #F1F0EF);
 }
 
 @media (max-width: 950px) {

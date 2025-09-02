@@ -19,7 +19,7 @@ body {
 }
 .container_pd {
 	width: 100%;
-	max-width: 1440px;
+	max-width: 1920px;
 	margin: 0 auto;
 	padding: 0px 20px;
 }
@@ -314,8 +314,12 @@ img {
 			color: var(--Neutrals-neutral-1000, #1a1715);
 		}
 
-		&:active {
+		&:hover {
 			color: var(--Neutrals-neutral-800, #796f64);
+		}
+
+		&:active {
+			color: var(--Neutrals-neutral-900, #524B43);
 		}
 
 		&:focus-visible {
@@ -503,9 +507,11 @@ img {
 	}
 	.header__link
 	,.filter-tab button
-	,.account-nav__link {
+	,.account-nav__link,
+	button.burger.mob {
 		&:hover{
 			color: #796F64 !important;
+
 		}
 		&:active {
 			color:  #524B43 !important;
@@ -520,8 +526,11 @@ img {
 			outline: 1px solid #fb654f;
 			outline-offset: 2px;
 		}
+		&:hover {
+			color: var(--Neutrals-neutral-400, #C9C5C1);
+		}
 		&:active {
-			color: var(--Neutrals-neutral-000, #bcbcbc) !important;
+			color: var(--Neutrals-neutral-600, #AEA8A2);
 		}
 	}
 	.card__item {

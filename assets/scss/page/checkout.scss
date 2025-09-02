@@ -194,6 +194,12 @@
             }
         }
 
+        &:hover {
+            .checkmark {
+                background: var(--Neutrals-neutral-100, #F1F0EF);
+            }
+        }
+
         &:active {
             .checkmark {
                 background: var(--Neutrals-neutral-200, #E3E1E0);

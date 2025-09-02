@@ -51,6 +51,7 @@
 .cart-section .cart-items .cart-item-photo img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 .cart-section .cart-items .cart-item-name {
   text-align: center;

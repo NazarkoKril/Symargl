@@ -152,6 +152,9 @@
   transition: var(--trans);
   position: relative;
 }
+.item-section .item-info-details .sizes .size:hover:not(:has(input:disabled)) {
+  background-color: var(--Neutrals-neutral-100, #F1F0EF);
+}
 .item-section .item-info-details .sizes .size:active {
   background-color: var(--Neutrals-neutral-200, #E3E1E0);
 }
@@ -184,7 +187,7 @@
   transition: all 0.3s ease-out 0.7s;
   white-space: nowrap;
 }
-.item-section .item-info-details .sizes .size:hover .tooltip {
+.item-section .item-info-details .sizes .size:has(input:disabled):hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
@@ -460,6 +463,7 @@
   position: absolute;
   inset: 0;
   padding: 20px;
+  height: 100%;
 }
 .lookbook__section .lookbook__list_img {
   padding: 0;

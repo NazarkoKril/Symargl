@@ -95,8 +95,12 @@
             position: relative;
             transition: var(--trans);
 
-            &:active {
+            &:hover {
                 color: var(--Neutrals-neutral-800, #796F64);
+            }
+
+            &:active {
+                color: var(--Neutrals-neutral-600, #AEA8A2);
             }
 
             &:focus-visible {
@@ -136,9 +140,15 @@
                 background: none;
                 transition: var(--trans);
 
-                &:active {
+                &:hover {
                     .block {
                         background-color: var(--Neutrals-neutral-800, #796F64);
+                    }
+                }
+
+                &:active {
+                    .block {
+                        background-color: var(--Neutrals-neutral-900, #524B43);
                     }
                 }
 

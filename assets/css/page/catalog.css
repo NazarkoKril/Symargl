@@ -95,8 +95,11 @@
   -webkit-transition: var(--trans);
   transition: var(--trans);
 }
-.settings-section .right #filters-btn:active {
+.settings-section .right #filters-btn:hover {
   color: var(--Neutrals-neutral-800, #796F64);
+}
+.settings-section .right #filters-btn:active {
+  color: var(--Neutrals-neutral-600, #AEA8A2);
 }
 .settings-section .right #filters-btn:focus-visible {
   outline: 1px solid #fb654f;
@@ -134,8 +137,11 @@
   -webkit-transition: var(--trans);
   transition: var(--trans);
 }
-.settings-section .right .toggle button:active .block {
+.settings-section .right .toggle button:hover .block {
   background-color: var(--Neutrals-neutral-800, #796F64);
+}
+.settings-section .right .toggle button:active .block {
+  background-color: var(--Neutrals-neutral-900, #524B43);
 }
 .settings-section .right .toggle button:focus-visible {
   outline: 1px solid #fb654f;

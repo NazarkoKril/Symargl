@@ -164,6 +164,9 @@
   transition: var(--trans);
   margin: 3px;
 }
+.checkout-section .checkbox-input:hover .checkmark {
+  background: var(--Neutrals-neutral-100, #F1F0EF);
+}
 .checkout-section .checkbox-input:active .checkmark {
   background: var(--Neutrals-neutral-200, #E3E1E0);
 }
