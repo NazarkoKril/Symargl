@@ -104,6 +104,16 @@
             width: 24px;
             height: 24px;
             background-color: var(--color);
+            display: block;
+
+            input {
+                display: none;
+            }
+
+            &:has(input:checked) {
+                outline: 1px solid #fb654f;
+			    outline-offset: 2px;
+            }
         }
                 }
 

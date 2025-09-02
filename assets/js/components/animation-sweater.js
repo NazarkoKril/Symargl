@@ -20,6 +20,7 @@ class SweaterScrollAnimation {
 		this.isReverseAnimation = false;
 		this.lastScrollY = 0;
 		this.canStartNewAnimation = true;
+		this.isForceScrolling = false;
 
 		this.init();
 	}
@@ -51,7 +52,7 @@ class SweaterScrollAnimation {
 		window.addEventListener(
 			"scroll",
 			(e) => {
-				if (this.isScrollBlocked) {
+				if (this.isScrollBlocked && !this.isForceScrolling) {
 					this.handleScroll(e);
 				}
 			},
@@ -61,12 +62,45 @@ class SweaterScrollAnimation {
 		window.addEventListener(
 			"wheel",
 			(e) => {
-				if (this.isScrollBlocked) {
+				if (this.isScrollBlocked && !this.isForceScrolling) {
 					this.handleWheel(e);
 				}
 			},
 			{ passive: false }
 		);
+
+		window.addEventListener("keydown", (e) => {
+			if (this.isScrollBlocked) {
+				this.handleKeydown(e);
+			}
+		});
+
+		window.addEventListener("mousedown", (e) => {
+			if (this.isScrollBlocked) {
+				this.handleScrollbarInteraction(e);
+			}
+		});
+
+		let isScrollbarDragging = false;
+		window.addEventListener("mousedown", (e) => {
+			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+			if (scrollbarWidth > 0 && e.clientX >= document.documentElement.clientWidth) {
+				isScrollbarDragging = true;
+				if (this.isScrollBlocked) {
+					this.forceSkipToEnd();
+				}
+			}
+		});
+
+		window.addEventListener("mousemove", (e) => {
+			if (isScrollbarDragging && this.isScrollBlocked) {
+				this.forceSkipToEnd();
+			}
+		});
+
+		window.addEventListener("mouseup", () => {
+			isScrollbarDragging = false;
+		});
 
 		let touchStartY = 0;
 		window.addEventListener("touchstart", (e) => {
@@ -78,7 +112,7 @@ class SweaterScrollAnimation {
 		window.addEventListener(
 			"touchmove",
 			(e) => {
-				if (this.isScrollBlocked) {
+				if (this.isScrollBlocked && !this.isForceScrolling) {
 					const deltaY = touchStartY - e.touches[0].clientY;
 					this.updateAnimation(deltaY > 0 ? 1 : -1);
 					touchStartY = e.touches[0].clientY;
@@ -87,6 +121,112 @@ class SweaterScrollAnimation {
 			},
 			{ passive: false }
 		);
+	}
+
+	handleKeydown(e) {
+		switch(e.key) {
+			case 'End':
+				this.forceSkipToEnd();
+				e.preventDefault();
+				break;
+			case 'Home':
+				this.forceSkipToTop();
+				e.preventDefault();
+				break;
+			case 'PageDown':
+				this.forceSkipToEnd();
+				e.preventDefault();
+				break;
+			case 'PageUp':
+				this.forceSkipToTop();
+				e.preventDefault();
+				break;
+		}
+	}
+
+	handleScrollbarInteraction(e) {
+		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+		const clickX = e.clientX;
+		
+		if (scrollbarWidth > 0 && clickX >= document.documentElement.clientWidth) {
+			this.forceSkipToEnd();
+		}
+	}
+
+	forceSkipToEnd() {
+		if (!this.isScrollBlocked) {
+			window.scrollTo({
+				top: document.body.scrollHeight,
+				behavior: 'smooth'
+			});
+			return;
+		}
+
+		this.isForceScrolling = true;
+		
+		this.scrollStep = this.config.scrollSteps;
+		this.currentWidthPercent = this.config.minWidthPercent;
+		
+		const img = this.sweaterImg.querySelector("img");
+		if (img) {
+			img.style.width = this.currentWidthPercent + "%";
+		}
+		
+		this.toggleTextVisibility();
+		
+		this.animationComplete = true;
+		this.isScrollBlocked = false;
+		this.isReverseAnimation = false;
+		this.canStartNewAnimation = true;
+		document.body.style.overflow = "";
+		
+		window.scrollTo(0, document.body.scrollHeight);
+		
+		this.isForceScrolling = false;
+	}
+
+	forceSkipToTop() {
+		if (!this.isScrollBlocked) {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+			return;
+		}
+
+		this.isForceScrolling = true;
+		
+		this.resetAnimation();
+		
+		window.scrollTo(0, 0);
+		
+		this.isForceScrolling = false;
+	}
+
+	forceReverseAnimation() {
+		if (!this.isScrollBlocked) return;
+
+		this.isForceScrolling = true;
+		
+		this.scrollStep = 0;
+		this.currentWidthPercent = this.config.initialWidthPercent;
+		
+		const img = this.sweaterImg.querySelector("img");
+		if (img) {
+			img.style.width = this.currentWidthPercent + "%";
+		}
+		
+		this.toggleTextVisibility();
+		this.completeReverseAnimation();
+		
+		setTimeout(() => {
+			this.isForceScrolling = false;
+			
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		}, 100);
 	}
 
 	checkImagePosition() {
@@ -144,6 +284,7 @@ class SweaterScrollAnimation {
 		this.isScrollBlocked = true;
 		this.isReverseAnimation = isReverse;
 		this.animationStartScrollY = window.scrollY;
+		this.isForceScrolling = false;
 
 		if (isReverse) {
 			this.scrollStep = this.config.scrollSteps;

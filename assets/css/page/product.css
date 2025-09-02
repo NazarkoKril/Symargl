@@ -108,6 +108,14 @@
   width: 24px;
   height: 24px;
   background-color: var(--color);
+  display: block;
+}
+.item-section .item-info-details .colors .color input {
+  display: none;
+}
+.item-section .item-info-details .colors .color:has(input:checked) {
+  outline: 1px solid #fb654f;
+  outline-offset: 2px;
 }
 .item-section .item-info-details .size-header {
   display: -webkit-box;
