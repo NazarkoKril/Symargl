@@ -9,7 +9,7 @@ class SweaterScrollAnimation {
 		this.config = {
 			initialWidthPercent: 100,
 			minWidthPercent: 35,
-			scrollSteps: 100,
+			scrollSteps: 40,
 		};
 
 		this.isScrollBlocked = false;
