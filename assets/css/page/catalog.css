@@ -818,6 +818,10 @@ body:has(.filters.open), body:has(.menu.open) {
   overflow: hidden;
 }
 
+.close-btn:active {
+  background: var(--Neutrals-neutral-200, #c9c5c1);
+}
+
 @media (max-width: 840px) {
   .hero__section {
     padding-top: 4px;

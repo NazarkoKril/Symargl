@@ -228,6 +228,10 @@ img {
 .input-box .input textarea::placeholder {
   color: var(--Neutrals-neutral-400, #c9c5c1);
 }
+.input-box .input input:hover,
+.input-box .input textarea:hover {
+  border-bottom: 0.5px solid var(--Neutrals-neutral-600, #AEA8A2);
+}
 .input-box .input input:focus,
 .input-box .input textarea:focus {
   border-bottom: 0.5px solid var(--Neutrals-neutral-800, #796f64);

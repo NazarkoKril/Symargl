@@ -359,8 +359,8 @@
   position: absolute;
   left: 0;
   top: 2px;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border: 1px solid var(--Neutrals-neutral-400, #c9c5c1);
   background: #fff;
   -webkit-transition: border-color 0.25s ease, background-color 0.25s ease, -webkit-box-shadow 0.25s ease;
@@ -372,10 +372,10 @@
 .auth-check small::after {
   content: "";
   position: absolute;
-  left: 4.5px;
-  top: 6.5px;
-  width: 10px;
-  height: 10px;
+  left: 4.3px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--Neutrals-neutral-800, #796f64);
   -webkit-transform: scale(0.6);
           transform: scale(0.6);

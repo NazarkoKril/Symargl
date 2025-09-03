@@ -162,6 +162,9 @@
 .burger.active::before {
   opacity: 1;
 }
+.burger:active {
+  color: #524B43 !important;
+}
 
 @media (max-width: 840px) {
   .header__list.left {
@@ -1829,13 +1832,7 @@
         -ms-flex-align: start;
             align-items: start;
   }
-  .hero__section_404 .hero__box .h1_title {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .hero__section_404 .hero__box .sub_title {
-    padding-left: 20px;
-    padding-right: 20px;
     margin-left: 0px;
     max-width: unset;
   }

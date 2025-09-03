@@ -137,6 +137,10 @@
 	&.active::before {
 		opacity: 1;
 	}
+
+	&:active {
+		color:  #524B43 !important;
+	}
 }
 @media (max-width: 840px) {
 	.header__list.left {
@@ -1685,13 +1689,7 @@
 			flex-direction: column;
 			padding-top: 60px;
 			align-items: start;
-			.h1_title {
-				padding-left: 20px;
-				padding-right: 20px;
-			}
 			.sub_title {
-				padding-left: 20px;
-				padding-right: 20px;
 				margin-left: 0px;
 				max-width: unset;
 			}

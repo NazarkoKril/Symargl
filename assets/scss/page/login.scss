@@ -258,7 +258,7 @@ line-height: 14px; /* 116.667% */
   content:"";
   position:absolute;
   left:0; top:2px;
-  width:18px; height:18px;
+  width:15px; height:15px;
   border:1px solid var(--Neutrals-neutral-400, #c9c5c1);
   background:#fff;
   transition:border-color .25s ease, background-color .25s ease, box-shadow .25s ease;
@@ -268,8 +268,8 @@ line-height: 14px; /* 116.667% */
 .auth-check small::after{
   content:"";
   position:absolute;
-  left:4.5px; top:6.5px;
-  width:10px; height:10px;
+  left:4.3px; top:6px;
+  width:8px; height:8px;
   background:var(--Neutrals-neutral-800, #796f64);
   transform:scale(0.6);
   opacity:0;
