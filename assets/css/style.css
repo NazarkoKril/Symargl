@@ -516,7 +516,7 @@
   width: 220px;
   -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding-top: 52px;
+  padding-top: 62px;
 }
 
 .swiper-slide .slide__photo {
@@ -554,6 +554,9 @@
 .slide_info .h5_title {
   text-align: center;
   margin-bottom: 4px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slide__img {
@@ -2070,5 +2073,8 @@
   }
   .hero__section .btn {
     margin-left: 20px;
+  }
+  .slide_info .h5_title{
+    max-width: 330px;
   }
 }
