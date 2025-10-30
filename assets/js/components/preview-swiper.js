@@ -12,11 +12,11 @@ const swiper = new Swiper(".preview-swiper", {
     }
 });
 
-document.querySelectorAll(".item-photo-list img").forEach((img, index) => {
+document.querySelectorAll(".item-photo-list img").forEach((img, index, arr) => {
   img.addEventListener("click", () => {
     const preview = document.querySelector(".preview");
     preview.classList.add("open");
-    swiper.slideTo(index, 0);
+    swiper.slideTo(index % (arr.length / 2), 0);
   });
 });
 

@@ -234,6 +234,84 @@
                 margin-bottom: 20px;
             }
     }
+
+    .item-swiper-container {
+        display: none;
+        position: sticky;
+        top: 0;
+        height: calc(100vh - 132px);
+        margin-top: -56px;
+        padding-top: 40px;
+        width: 100%;
+
+        .swiper {
+        padding: 0;
+        height: 100%;
+
+        &-slide {
+            width: 100% !important;
+            height: 100%;
+            padding: 0;
+            transition: none;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-pagination {
+            bottom: 16px;
+
+            &-bullet {
+                width: 4px;
+                height: 4px;
+                background: #FEFEFF66;
+                transition: var(--trans);
+
+                &-active {
+                    width: 12px;
+                    background: var(--Neutrals-neutral-000, #FEFEFF);
+                    border-radius: 198px;
+                }
+
+                &:active {
+                    background: #FEFEFFCC;
+                }
+
+                &:focus-visible {
+                    outline: 1px solid #fb654f;
+			        outline-offset: 2px;
+                }
+
+                &:disabled {
+                    background: #FEFEFF1A;
+                }
+            }
+        }
+
+        &-button-prev, &-button-next {
+            height: 100%;
+            width: 80px;
+            top: 0;
+            pointer-events: auto;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &-button-next {
+            right: 0;
+        }
+
+        &-button-prev {
+            left: 0;
+        }
+        }
+    }
 }
 
 .content-section {
@@ -800,19 +878,12 @@ body:has(.preview.open) {
         }
 
         .item-photo {
-            order: 1;
-            position: sticky;
-            top: 0;
-            overflow-y: scroll;
-            height: calc(100vh - 132px);
-            margin-top: -56px;
-            padding-top: 56px;
-            width: 100%;
-            max-width: unset;
+            display: none;
+        }
 
-            &::-webkit-scrollbar {
-                display: none;
-            }
+        .item-swiper-container {
+            order: 1;
+            display: block;
         }
     }
 
